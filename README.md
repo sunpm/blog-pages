@@ -24,25 +24,20 @@
 - [移动端](#移动端)
 - [正则](#正则)
 
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-
 ## CSS
 
 * ### Flex
+  
+  * [Flex 布局教程-语法篇](CSS/Flex/Flex 布局教程-语法篇.md)
+  
   * [Flex 布局教程-实例篇](CSS/Flex/Flex 布局教程-实例篇.md)
-* 
+  * [flex布局兼容问题](CSS/Flex/flex布局兼容问题.md)
+  
+* ### 字体
+
+  * [Google Fonts 的介绍与使用](CSS/字体/Google Fonts 的介绍与使用.md)
+  * [google字体使用文档](CSS/字体/google字体使用文档.md)
+
+* [16种方法实现水平居中垂直居中](CSS/16种方法实现水平居中垂直居中.md)
+
+* [CSS nth-child()选择前几个元素](CSS/CSS nth-child()选择前几个元素.md)

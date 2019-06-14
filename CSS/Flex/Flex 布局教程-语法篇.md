@@ -1,14 +1,16 @@
+# [Flex 布局教程：语法篇(阮一峰)](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
+
 网页布局（layout）是 CSS 的一个重点应用。
 
-![img](https://ws1.sinaimg.cn/large/006tNc79gy1fznv1h3eaxg30b709sdft.gif)
+![img](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071001.gif)
 
 布局的传统解决方案，基于[盒状模型](https://developer.mozilla.org/en-US/docs/Web/CSS/box_model)，依赖 [`display`](https://developer.mozilla.org/en-US/docs/Web/CSS/display) 属性 + [`position`](https://developer.mozilla.org/en-US/docs/Web/CSS/position)属性 + [`float`](https://developer.mozilla.org/en-US/docs/Web/CSS/float)属性。它对于那些特殊布局非常不方便，比如，[垂直居中](https://css-tricks.com/centering-css-complete-guide/)就不容易实现。
 
-![img](https://ws2.sinaimg.cn/large/006tNc79gy1fznv1jw0haj30jg0a8q30.jpg)
+![img](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071002.png)
 
 2009年，W3C 提出了一种新的方案----Flex 布局，可以简便、完整、响应式地实现各种页面布局。目前，它已经得到了所有浏览器的支持，这意味着，现在就能很安全地使用这项功能。
 
-![img](https://ws2.sinaimg.cn/large/006tNc79gy1fznv1ny8pxj30oz08tt8w.jpg)
+![img](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071003.jpg)
 
 Flex 布局将成为未来布局的首选方案。本文介绍它的语法，[下一篇文章](http://www.ruanyifeng.com/blog/2015/07/flex-examples.html)给出常见布局的 Flex 写法。网友 [JailBreak](http://vgee.cn/) 为本文的所有示例制作了 [Demo](http://static.vgee.cn/static/index.html)，也可以参考。
 
@@ -20,28 +22,28 @@ Flex 是 Flexible Box 的缩写，意为"弹性布局"，用来为盒状模型�
 
 任何一个容器都可以指定为 Flex 布局。
 
-> ```css
-> .box{
->   display: flex;
-> }
-> ```
+```css
+.box{
+    display: flex;
+}
+```
 
 行内元素也可以使用 Flex 布局。
 
-> ```css
-> .box{
->   display: inline-flex;
-> }
-> ```
+```css
+.box{
+    display: inline-flex;
+}
+```
 
 Webkit 内核的浏览器，必须加上`-webkit`前缀。
 
-> ```css
-> .box{
->   display: -webkit-flex; /* Safari */
->   display: flex;
-> }
-> ```
+```css
+.box{
+    display: -webkit-flex; /* Safari */
+    display: flex;
+}
+```
 
 注意，设为 Flex 布局以后，子元素的`float`、`clear`和`vertical-align`属性将失效。
 
@@ -49,7 +51,7 @@ Webkit 内核的浏览器，必须加上`-webkit`前缀。
 
 采用 Flex 布局的元素，称为 Flex 容器（flex container），简称"容器"。它的所有子元素自动成为容器成员，称为 Flex 项目（flex item），简称"项目"。
 
-![img](https://ws2.sinaimg.cn/large/006tNc79gy1fznv1p0rlgj30fn099q2x.jpg)
+![img](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071004.png)
 
 容器默认存在两根轴：水平的主轴（main axis）和垂直的交叉轴（cross axis）。主轴的开始位置（与边框的交叉点）叫做`main start`，结束位置叫做`main end`；交叉轴的开始位置叫做`cross start`，结束位置叫做`cross end`。
 
@@ -70,13 +72,13 @@ Webkit 内核的浏览器，必须加上`-webkit`前缀。
 
 `flex-direction`属性决定主轴的方向（即项目的排列方向）。
 
-> ```css
-> .box {
->   flex-direction: row | row-reverse | column | column-reverse;
-> }
-> ```
+```css
+.box {
+    flex-direction: row | row-reverse | column | column-reverse;
+}
+```
 
-![img](https://ws3.sinaimg.cn/large/006tNc79gy1fznv1q5gh8j30m405na9z.jpg)
+![img](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071005.png)
 
 它可能有4个值。
 
@@ -89,49 +91,49 @@ Webkit 内核的浏览器，必须加上`-webkit`前缀。
 
 默认情况下，项目都排在一条线（又称"轴线"）上。`flex-wrap`属性定义，如果一条轴线排不下，如何换行。
 
-![img](https://ws2.sinaimg.cn/large/006tNc79gy1fznv1vjfpcj30m607oa9u.jpg)
+![img](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071006.png)
 
-> ```css
-> .box{
->   flex-wrap: nowrap | wrap | wrap-reverse;
-> }
-> ```
+```css
+.box{
+    flex-wrap: nowrap | wrap | wrap-reverse;
+}
+```
 
 它可能取三个值。
 
 （1）`nowrap`（默认）：不换行。
 
-![img](https://ws2.sinaimg.cn/large/006tNc79gy1fznv1xg63sj30jg041aam.jpg)
+![img](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071007.png)
 
 （2）`wrap`：换行，第一行在上方。
 
-![img](https://ws1.sinaimg.cn/large/006tNc79gy1fznv1zlushj30jg04x3yv.jpg)
+![img](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071008.jpg)
 
 （3）`wrap-reverse`：换行，第一行在下方。
 
-![img](https://ws3.sinaimg.cn/large/006tNc79gy1fznv20mjl4j30jg04xmxf.jpg)
+![img](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071009.jpg)
 
 ### 3.3 flex-flow
 
 `flex-flow`属性是`flex-direction`属性和`flex-wrap`属性的简写形式，默认值为`row nowrap`。
 
-> ```css
-> .box {
->   flex-flow: <flex-direction> || <flex-wrap>;
-> }
-> ```
+```css
+.box {
+    flex-flow: <flex-direction> || <flex-wrap>;
+}
+```
 
 ### 3.4 justify-content属性
 
 `justify-content`属性定义了项目在主轴上的对齐方式。
 
-> ```css
-> .box {
->   justify-content: flex-start | flex-end | center | space-between | space-around;
-> }
-> ```
+```css
+.box {
+    justify-content: flex-start | flex-end | center | space-between | space-around;
+}
+```
 
-![img](https://ws2.sinaimg.cn/large/006tNc79gy1fznv26o7q3j30hp0l70sn.jpg)
+![img](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071010.png)
 
 它可能取5个值，具体对齐方式与轴的方向有关。下面假设主轴为从左到右。
 
@@ -145,13 +147,13 @@ Webkit 内核的浏览器，必须加上`-webkit`前缀。
 
 `align-items`属性定义项目在交叉轴上如何对齐。
 
-> ```css
-> .box {
->   align-items: flex-start | flex-end | center | baseline | stretch;
-> }
-> ```
+```css
+.box {
+    align-items: flex-start | flex-end | center | baseline | stretch;
+}
+```
 
-![img](https://ws3.sinaimg.cn/large/006tNc79gy1fznv2as358j30h50lu3yg.jpg)
+![img](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071011.png)
 
 它可能取5个值。具体的对齐方式与交叉轴的方向有关，下面假设交叉轴从上到下。
 
@@ -165,13 +167,13 @@ Webkit 内核的浏览器，必须加上`-webkit`前缀。
 
 `align-content`属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。
 
-> ```css
-> .box {
->   align-content: flex-start | flex-end | center | space-between | space-around | stretch;
-> }
-> ```
+```css
+.box {
+    align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+}
+```
 
-![img](https://ws1.sinaimg.cn/large/006tNc79gy1fznv2cae99j30h80lu0so.jpg)
+![img](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071012.png)
 
 该属性可能取6个值。
 
@@ -197,25 +199,25 @@ Webkit 内核的浏览器，必须加上`-webkit`前缀。
 
 `order`属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。
 
-> ```css
-> .item {
->   order: <integer>;
-> }
-> ```
+```css
+.item {
+    order: <integer>;
+}
+```
 
-![img](https://ws4.sinaimg.cn/large/006tNc79gy1fznv2d3lzjj30kv0dca9v.jpg)
+![img](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071013.png)
 
 ### 4.2 flex-grow属性
 
 `flex-grow`属性定义项目的放大比例，默认为`0`，即如果存在剩余空间，也不放大。
 
-> ```css
-> .item {
->   flex-grow: <number>; /* default 0 */
-> }
-> ```
+```css
+.item {
+    flex-grow: <number>; /* default 0 */
+}
+```
 
-![img](https://ws1.sinaimg.cn/large/006tNc79gy1fznv2eltxgj30ma05v3yf.jpg)
+![img](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071014.png)
 
 如果所有项目的`flex-grow`属性都为1，则它们将等分剩余空间（如果有的话）。如果一个项目的`flex-grow`属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。
 
@@ -223,13 +225,13 @@ Webkit 内核的浏览器，必须加上`-webkit`前缀。
 
 `flex-shrink`属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。
 
-> ```css
-> .item {
->   flex-shrink: <number>; /* default 1 */
-> }
-> ```
+```css
+.item {
+    flex-shrink: <number>; /* default 1 */
+}
+```
 
-![img](https://ws1.sinaimg.cn/large/006tNc79gy1fznv2fhuzoj30jg041t8x.jpg)
+![img](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071015.jpg)
 
 如果所有项目的`flex-shrink`属性都为1，当空间不足时，都将等比例缩小。如果一个项目的`flex-shrink`属性为0，其他项目都为1，则空间不足时，前者不缩小。
 
@@ -239,11 +241,11 @@ Webkit 内核的浏览器，必须加上`-webkit`前缀。
 
 `flex-basis`属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为`auto`，即项目的本来大小。
 
-> ```css
-> .item {
->   flex-basis: <length> | auto; /* default auto */
-> }
-> ```
+```css
+.item {
+    flex-basis: <length> | auto; /* default auto */
+}
+```
 
 它可以设为跟`width`或`height`属性一样的值（比如350px），则项目将占据固定空间。
 
@@ -251,11 +253,11 @@ Webkit 内核的浏览器，必须加上`-webkit`前缀。
 
 `flex`属性是`flex-grow`, `flex-shrink` 和 `flex-basis`的简写，默认值为`0 1 auto`。后两个属性可选。
 
-> ```css
-> .item {
->   flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
-> }
-> ```
+```css
+.item {
+    flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
+}
+```
 
 该属性有两个快捷值：`auto` (`1 1 auto`) 和 none (`0 0 auto`)。
 
@@ -265,13 +267,13 @@ Webkit 内核的浏览器，必须加上`-webkit`前缀。
 
 `align-self`属性允许单个项目有与其他项目不一样的对齐方式，可覆盖`align-items`属性。默认值为`auto`，表示继承父元素的`align-items`属性，如果没有父元素，则等同于`stretch`。
 
-> ```css
-> .item {
->   align-self: auto | flex-start | flex-end | center | baseline | stretch;
-> }
-> ```
+```css
+.item {
+    align-self: auto | flex-start | flex-end | center | baseline | stretch;
+}
+```
 
-![img](https://ws4.sinaimg.cn/large/006tNc79gy1fznv2ianrtj30kn0aua9w.jpg)
+![img](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071016.png)
 
 该属性可能取6个值，除了auto，其他都与align-items属性完全一致。
 

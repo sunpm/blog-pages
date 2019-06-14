@@ -1,3 +1,5 @@
+# flex布局兼容问题
+
 flex布局分为旧版本`dispaly: box;`，过渡版本`dispaly: flex box;`，以及现在的标准版本`display: flex;`。所以如果你只是写新版本的语法形式，是肯定存在兼容性问题的。
 
 - Android 
@@ -11,7 +13,7 @@ flex布局分为旧版本`dispaly: box;`，过渡版本`dispaly: flex box;`，�
 
 下面是各个浏览器的支持情况
 
-![img](https://ws3.sinaimg.cn/large/006tKfTcgy1g0r0l3vozuj31so0r2diw.jpg)
+![img](http://pt2wfxkik.bkt.clouddn.com/006tKfTcgy1g0r0l3vozuj31so0r2diw.jpg)
 
  
 
@@ -166,4 +168,4 @@ flex布局分为旧版本`dispaly: box;`，过渡版本`dispaly: flex box;`，�
 
 ### 图示
 
-![弹性盒模型](https://ws4.sinaimg.cn/large/006tKfTcgy1g0r0l7e4w1j309k01f0k9.jpg)
+![弹性盒模型](http://pt2wfxkik.bkt.clouddn.com/006tKfTcgy1g0r0l7e4w1j309k01f0k9.jpg)
