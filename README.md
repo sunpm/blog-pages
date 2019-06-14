@@ -28,6 +28,6 @@
 
 * ### Flex
 
-  * [Flex 布局教程：实例篇](CSS/Flex/Flex 布局教程：实例篇.md)
+  * [Flex 布局教程：实例篇](./CSS/Flex/Flex 布局教程：实例篇.md)
 
 * 
