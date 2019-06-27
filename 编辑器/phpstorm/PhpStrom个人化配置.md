@@ -51,3 +51,36 @@ Editor->General->Appearence->Show hard wrap guide  去掉勾就可以 取消白�
 
 
 ![img](https://upload-images.jianshu.io/upload_images/1779921-542e58d41b6444f2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp)
+
+
+
+# Phpstorm [设置注释符缩进位置](https://blog.csdn.net/ASUKA2020/article/details/84527927)
+
+在日常PHP项目开发中，使用 Phpstrom 单行注释时，注释符号「//」没有和代码缩进的位置对齐。
+
+注释不对齐情况：
+
+```js
+function test() { 
+    //这是注释
+//    return false; 
+}
+```
+
+我们想要的是下面这种：
+
+```js
+function test() {
+    //这是注释
+    //return false;
+}
+```
+
+设置方式：
+
+> 菜单栏：File > Settings > Editor > Code Style > PHP
+> 取消勾选「Code Generation」 选项卡下的「Line comment at first column」
+> 添加勾选 「Code Generation」 选项卡下的「Add a space at comment start」
+> 设置好后，依次点击「Apply」、「OK」按钮，使配置生效。
+
+![å¨è¿éæå¥å¾çæè¿°](https://img-blog.csdnimg.cn/20181126104439155.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0FTVUtBMjAyMA==,size_16,color_FFFFFF,t_70)
