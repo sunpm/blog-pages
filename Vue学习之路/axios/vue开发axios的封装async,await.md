@@ -107,18 +107,16 @@ async textRequest(){
 
 上面就是这次的封装了，没有之前的那些`.then`和`.catch`分层了，就像回调那样的。现在直接一行代码搞定。
 
-> 不过使用的时候发现了不足，请求异常时取data会报错 
->
-> ```js
-> async textRequest () {
->     try {
->         let data = await this.$http.get('url')
->         console.log(data)
->     } catch (err) { console.log(err) }
-> }
-> ```
->
-> 
+ 不过使用的时候发现了不足，请求异常时取data会报错 
+
+ ```js
+async textRequest () {
+    try {
+        let data = await this.$http.get('url')
+        console.log(data)
+    } catch (err) { console.log(err) }
+}
+ ```
 
 ---------------------
 作者：湖工电气 
