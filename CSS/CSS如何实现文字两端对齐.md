@@ -11,7 +11,7 @@ text-justify:inter-ideograph;
 
 但问题是，我怎么就看不到效果呢？无论是英文还是中文，在IE和chrome下都不起作用。后来，终于在StackOverflow上找到解决方法了。
 
-```
+```html
 <!DOCTYPE html>
 <html>
 
@@ -41,16 +41,11 @@ text-justify:inter-ideograph;
 				height: 0;
 			}
 			
-			
-			
-			
 			.arter1 li {
 				font-size: 14px;
 				line-height: 24px;
 				color: #4a4a4a;
 			}
-			
-			
 			
 			.arter1 span {
 				height: 24px;
@@ -107,7 +102,7 @@ text-justify:inter-ideograph;
 
 但是加入HTML元素又违反了结构表现分离的原则，我们可以改用after、before伪元素：
 
-```
+```css
 li:after {
     content: " ";
     display: inline-block;
