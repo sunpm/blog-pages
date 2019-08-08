@@ -5,6 +5,8 @@
 1. 安装animate.css
 
    > cnpm install animate.css –save
+   >
+   > cnpm install --save animate.css
 
    当然也可以将animate.css文件下载下来 
    [下载animate.css](https://raw.github.com/daneden/animate.css/master/animate.css) 
