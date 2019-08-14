@@ -32,6 +32,12 @@ VueCookies.set('theme','default');
 VueCookies.set('hover-time','1s');
 ```
 
+> **计算剩余的`token`时间**
+>
+> ```js
+> this.$cookies.set("token", token.data.token, Math.floor(new Date(token.data.expire).getTime() / 1000 - (new Date()).getTime() / 1000))
+> ```
+
 ## Api
 
 - Set a cookie
