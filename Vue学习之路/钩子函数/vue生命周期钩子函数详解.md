@@ -2,7 +2,7 @@
 
 **先放一张官网生命周期图：**
 
-![vueçå½å¨æå¾](https://img-blog.csdn.net/20180726104042716?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM1NTg1NzAx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70) 
+![img](https://user-gold-cdn.xitu.io/2019/2/21/1690dfbce06b05ee?imageslim) 
 
 **vue有8种生命周期函数：**
 
