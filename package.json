@@ -2,6 +2,10 @@
   "name": "blog-pages",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
   "repository": "git@github.com:sunpm/blog-pages.git",
   "author": "sunpm <15022352@qq.com>",
   "license": "MIT",
