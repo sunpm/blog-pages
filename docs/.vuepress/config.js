@@ -1,6 +1,6 @@
 module.exports = {
-  title: '算法学习',
-  description: 'Just playing around',
+  title: 'sunpm',
+  description: '成功少不了沉淀！',
   base: '/blog-pages/',
   configureWebpack: {
     resolve: {
