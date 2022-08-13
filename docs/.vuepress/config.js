@@ -22,11 +22,7 @@ module.exports = {
       {
         text: '了解更多',
         items: [
-          { text: 'Github', link: 'https://github.com/strugglinglee' },
-          {
-            text: '博客',
-            link: 'https://blog.strugglinglee.cn/',
-          },
+          { text: 'Github', link: 'https://github.com/sunpm' }
         ],
       },
     ],
