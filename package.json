@@ -1,0 +1,11 @@
+{
+  "name": "blog-pages",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:sunpm/blog-pages.git",
+  "author": "sunpm <15022352@qq.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.9.7"
+  }
+}
