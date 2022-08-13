@@ -1,7 +1,7 @@
 module.exports = {
   title: '算法学习',
   description: 'Just playing around',
-  base: '/algorithm-learn/',
+  base: '/blog-pages/',
   configureWebpack: {
     resolve: {
       alias: {
