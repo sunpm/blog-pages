@@ -8,7 +8,7 @@ export default defineConfig({
   title: 'sunpm',
   titleTemplate: 'Vite & Vue powered static site generator',
   description: '成功少不了沉淀！',
-  base: '/blog-pages/',
+  // base: '/blog-pages/',
   lastUpdated: true,
   lang: 'zh-CN',
   // @ts-ignore
