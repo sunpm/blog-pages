@@ -17,12 +17,15 @@ jobs:
       # 拉取代码
       - name: Checkout 🛎️
         uses: actions/checkout@v3
+        uses: actions/setup-node@v3
         with:
           persist-credentials: false
+          node-version: 16
+          cache: yarn
 
       # 生成静态文件
       - name: Install and Build 🔧
-        run: npm install && npm run build
+        run: yarn install --frozen-lockfile && yarn build
 
       # 部署到 GitHub Pages
       - name: Deploy 🚀
