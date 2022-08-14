@@ -4,8 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "vitepress dev docs",
-    "build": "vitepress build docs",
-    "notice": "sh scripts/notice.sh"
+    "build": "vitepress build docs"
   },
   "repository": "git@github.com:sunpm/blog-pages.git",
   "author": "sunpm <15022352@qq.com>",
