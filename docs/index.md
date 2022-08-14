@@ -9,10 +9,10 @@ hero:
     alt: VitePress
   actions:
     - theme: brand
-      text: Get Started
+      text: 开始
       link: /01.前端/前端面试/前端面试一
     - theme: alt
-      text: View on GitHub
+      text: 在 GitHub 上查看
       link: https://github.com/sunpm/blog-pages
 
 
