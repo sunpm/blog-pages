@@ -6,6 +6,7 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
 
 # 任务
 jobs:
@@ -21,7 +22,7 @@ jobs:
 
       # 生成静态文件
       - name: Install and Build 🔧
-        run: npm install vitepress -D && npm install && npm run build
+        run: npm install && npm run build
 
       # 部署到 GitHub Pages
       - name: Deploy 🚀
