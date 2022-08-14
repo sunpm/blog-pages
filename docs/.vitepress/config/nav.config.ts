@@ -1,10 +1,10 @@
 import {DefaultTheme} from 'vitepress'
 
 const navConfig: DefaultTheme.NavItem[] = [
-  { text: 'Home', link: '/first-day' },
+  { text: '首页', link: '/' },
   {
-    text: 'Components',
-    link: '/test'
+    text: '关于',
+    link: '/about/'
   },
 ]
 

@@ -13,6 +13,7 @@ export default defineConfig({
   // ignoreDeadLinks: true,
   head,
   themeConfig: {
+    logo: '/images/logo.png',
     sidebar,
     // 顶部右侧导航
     nav
