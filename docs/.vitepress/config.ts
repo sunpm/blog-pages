@@ -8,7 +8,7 @@ import AutoNavPlugin from 'vitepress-auto-nav-sidebar'
 
 const { nav, sidebar } = AutoNavPlugin({
   ignoreFolders: ["node_modules", "assets", "public", ".vitepress", "utils"], // 需要排除的一些目录
-  ignoreFiles: ['index'], // 需要排除的一些文件
+  ignoreFiles: ['index', '关于'], // 需要排除的一些文件
   // @ts-ignore
   isCollapse: true,
 })
@@ -33,6 +33,10 @@ export default defineConfig({
     // 顶部右侧导航
     nav: [
       ...nav,
+      {
+        text: '👋 关于我',
+        link: '/关于'
+      }
     ],
     footer: {
       message: 'Released under the MIT License.',
