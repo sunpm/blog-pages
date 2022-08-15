@@ -1,8 +1,21 @@
 import {defineConfig} from "vitepress"
 import head from './config/head.config'
-import sidebar from "./config/sidebar.config"
-import nav from './config/nav.config'
+// import sidebar from "./config/sidebar.config"
+// import nav from './config/nav.config'
 import {githubLink} from "./config/url.config"
+
+import AutoNavPlugin from 'vitepress-auto-nav-sidebar'
+
+const { nav, sidebar } = AutoNavPlugin({
+  ignoreFolders: ["node_modules", "assets", "public", ".vitepress", "code", ".obsidian", "utils"], // 需要排除的一些目录
+  ignoreFiles: ['index.md'], // 需要排除的一些文件
+  showNavIcon:false,
+  showSideIcon:true,
+  // @ts-ignore
+  isCollapse: true,
+  collapsed: false,
+  singleLayerNav:false
+})
 
 export default defineConfig({
   title: 'sunpm',
@@ -30,7 +43,7 @@ export default defineConfig({
     // 每个文章底下显示编辑按钮 https://vitepress.vuejs.org/guide/theme-edit-link.html
     editLink: {
       pattern: `${githubLink}/edit/master/docs/:path`,
-      text: 'Edit this page on GitHub'
+      text: '为此页提供修改建议'
     },
     // 社交链接 https://vitepress.vuejs.org/config/theme-configs.html#sociallinks
     socialLinks: [

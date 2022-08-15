@@ -1,17 +1,26 @@
 import {DefaultTheme} from 'vitepress'
+import {css, javascript, node} from "./url.config"
 
 const navConfig: DefaultTheme.NavItem[] = [
   { text: '首页', link: '/' },
   {
     text: '关于',
-    link: '/about/'
+    link: '/about/',
+    activeMatch: '/config/'
   },
   {
-    text: '操作系统',
+    text: '前端',
     items: [
-      { text: 'Macos', link: '/os/禁止生成.DS_Store文件' },
+      { text: 'css', link: `${css}/` },
+      { text: 'JavaScript', link: `${javascript}/` },
     ]
-  }
+  },
+  {
+    text: '后端',
+    items: [
+      { text: 'node', link: `${node}/` },
+    ]
+  },
 ]
 
 export default navConfig
