@@ -7,14 +7,10 @@ import {githubLink} from "./config/url.config"
 import AutoNavPlugin from 'vitepress-auto-nav-sidebar'
 
 const { nav, sidebar } = AutoNavPlugin({
-  ignoreFolders: ["node_modules", "assets", "public", ".vitepress", "code", ".obsidian", "utils"], // 需要排除的一些目录
-  ignoreFiles: ['index.md'], // 需要排除的一些文件
-  showNavIcon:false,
-  showSideIcon:true,
+  ignoreFolders: ["node_modules", "assets", "public", ".vitepress", "utils"], // 需要排除的一些目录
+  ignoreFiles: ['index'], // 需要排除的一些文件
   // @ts-ignore
   isCollapse: true,
-  collapsed: false,
-  singleLayerNav:false
 })
 
 export default defineConfig({
@@ -35,7 +31,9 @@ export default defineConfig({
     },
     sidebar,
     // 顶部右侧导航
-    nav,
+    nav: [
+      ...nav,
+    ],
     footer: {
       message: 'Released under the MIT License.',
       copyright: 'Copyright © 2022-present Sunpm'

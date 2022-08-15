@@ -1,4 +1,5 @@
 export const githubLink = 'https://github.com/sunpm/blog-pages'
+export const zhihuLink = 'https://www.zhihu.com/people/pmun'
 
 export const frontUrl = '/front'
 export const backUrl = '/back'
