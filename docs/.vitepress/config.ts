@@ -36,7 +36,7 @@ export default defineConfig({
       {
         text: '👋 关于我',
         link: '/关于'
-      }
+      },
     ],
     footer: {
       message: 'Released under the MIT License.',
