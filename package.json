@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
-    "baiduPush": "npx ts-node ./utils/baiduPush.ts https://blog.fassr.com && bash baiduPush.sh"
+    "baiduPush": "ts-node --log-error ./utils/baiduPush.ts https://blog.fassr.com && bash baiduPush.sh"
   },
   "repository": "git@github.com:sunpm/blog-pages.git",
   "author": "sunpm <15022352@qq.com>",
