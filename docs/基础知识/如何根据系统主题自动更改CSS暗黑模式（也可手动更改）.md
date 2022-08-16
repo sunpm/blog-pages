@@ -73,7 +73,7 @@ a {
 
 ```css
 .dark {
-  --background-color: #111416
+  --background-color: #111416;
   --text-color: #ccc;
   --link-color: #f96;
 }
