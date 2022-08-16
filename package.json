@@ -10,6 +10,7 @@
   "repository": "git@github.com:sunpm/blog-pages.git",
   "author": "sunpm <15022352@qq.com>",
   "license": "MIT",
+  "type": "module",
   "devDependencies": {
     "@types/node": "^18.7.5",
     "chalk": "^5.0.1",
