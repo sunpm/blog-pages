@@ -17,21 +17,21 @@ hero:
 
 
 features:
-  - icon: ⚡️
-    title: Vite, The DX that can't be beat
-    details: Lorem ipsum...
   - icon: 🖖
-    title: Power of Vue meets Markdown
-    details: Lorem ipsum...
+    title: 网站存在意义
+    details: 给自己留下一个记忆，就算再愚蠢的代码，都是愚蠢的自己写的。
   - icon: 🛠️
-    title: Simple and minimal, always
-    details: Lorem ipsum...
+    title: 学前端的第二天
+    details: 学任何东西，第一天总是容易的，但是能坚持到第二天的却不多。
+  - icon: 💪️
+    title: 我的前端技术栈
+    details: Vue3、TypeScript、Vite、Nuxt ......
 ---
 
 
 <style>
 :root {
-  --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe, #41d1ff);
+  //--vp-home-hero-name-color: transparent;
+  //--vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe, #41d1ff);
 }
 </style>
