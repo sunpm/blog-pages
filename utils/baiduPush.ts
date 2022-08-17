@@ -20,11 +20,12 @@ function main() {
   // @ts-ignore
   const files = readFileList(); // 读取所有md文件数据
 
-  files.forEach(file => {
+  files.forEach((file, index) => {
     // const { data } = fs.readFileSync(file.filePath, 'utf8');
     // console.log(chalk.green(`正在推送 ${file.filePath}`));
     if (file.filePath) {
       const link = `\r\n${DOMAIN}${file.filePath}`;
+      console.log(`正在插入:${index + 1}🏹${link}`)
       fs.appendFileSync(urlsRoot, link);
     }
   })
