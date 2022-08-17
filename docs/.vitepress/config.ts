@@ -5,10 +5,11 @@ import head from './config/head.config'
 import {githubLink} from "./config/url.config"
 
 import AutoNavPlugin from 'vitepress-auto-nav-sidebar'
+import {ignoreFiles, ignoreFolders} from "./config/auto.files"
 
 const { nav, sidebar } = AutoNavPlugin({
-  ignoreFolders: ["node_modules", "assets", "public", ".vitepress", "utils"], // 需要排除的一些目录
-  ignoreFiles: ['index', '关于'], // 需要排除的一些文件
+  ignoreFolders, // 需要排除的一些目录
+  ignoreFiles, // 需要排除的一些文件
   // @ts-ignore
   isCollapse: true,
 })

@@ -1,13 +1,14 @@
 /**
  *  读取所有md文件数据
  */
+import {ignoreFolders} from "../../docs/.vitepress/config/auto.files"
+
 // @ts-ignore
 const fs = require('fs'); // 文件模块
 // @ts-ignore
 const path = require('path'); // 路径模块
 const docsRoot = path.join(__dirname, '..', '..', 'docs'); // docs文件路径
 
-const ignoreFolders = ['node_modules', '.vitepress', '.DS_Store', 'public']; // 过滤文件夹
 
 // @ts-ignore
 function readFileList(dir = docsRoot, filesList = []) {
