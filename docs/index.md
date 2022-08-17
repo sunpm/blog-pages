@@ -1,16 +1,16 @@
 ---
 layout: home
 hero:
-  name: VitePress
-  text: Vite & Vue powered static site generator.
-  tagline: Lorem ipsum...
+  name: sunpm
+  text: 让未来新增些回忆。
+  tagline: 想要自由，首先自律。
   image:
     src: /images/logo.png
     alt: VitePress
   actions:
     - theme: brand
       text: 开始
-      link: /01.前端/前端面试/前端面试一
+      link: /基础知识/Vite/vite3添加别名
     - theme: alt
       text: 在 GitHub 上查看
       link: https://github.com/sunpm/blog-pages
@@ -29,9 +29,12 @@ features:
 ---
 
 
-<style>
-:root {
-  //--vp-home-hero-name-color: transparent;
-  //--vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe, #41d1ff);
-}
-</style>
+[//]: # (<script setup lang="ts">)
+
+[//]: # (import IndexFooter from './components/IndexFooter.vue')
+
+[//]: # ()
+[//]: # (</script>)
+
+[//]: # ()
+[//]: # (<IndexFooter />)
