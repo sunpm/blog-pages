@@ -13,7 +13,7 @@
 }
 ```
 
-```typescript{25-29}
+```typescript{9-13}
 // vite.config.ts
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
