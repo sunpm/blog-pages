@@ -19,6 +19,7 @@ export default defineConfig({
   titleTemplate: 'Vite & Vue powered static site generator',
   description: '成功少不了沉淀！',
   // base: '/blog-pages/',
+  lastUpdated: true,
   lang: 'zh-CN',
   // @ts-ignore
   ignoreDeadLinks: true,
@@ -51,6 +52,7 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: githubLink },
     ],
+    lastUpdatedText: '最后更新时间',
   },
   markdown: {
     // lineNumbers: true

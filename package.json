@@ -15,7 +15,7 @@
     "gray-matter": "^4.0.3",
     "ts-node": "^10.9.1",
     "typescript": "^4.7.4",
-    "vitepress": "^1.0.0-alpha.4",
+    "vitepress": "^1.0.0-alpha.5",
     "vitepress-auto-nav-sidebar": "^0.0.4",
     "vue": "^3.2.37"
   },
