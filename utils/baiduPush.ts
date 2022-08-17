@@ -25,7 +25,7 @@ function main() {
     // console.log(chalk.green(`正在推送 ${file.filePath}`));
     if (file.filePath) {
       const link = `\r\n${DOMAIN}${file.filePath}`;
-      console.log(`正在插入:${index + 1}🏹${link}`)
+      console.log(`正在插入:${index + 1}---------${link}`)
       fs.appendFileSync(urlsRoot, link);
     }
   })

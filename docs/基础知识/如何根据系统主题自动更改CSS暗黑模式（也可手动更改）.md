@@ -1,10 +1,8 @@
-#如何根据系统主题自动更改CSS暗黑模式（也可手动更改）
-
 现在在很多的网站上面都可以看到主题的切换，这也不是什么复杂的东西。有一些网站的主题还可以根据系统去自动切换，例如：[Taro](https://taro-docs.jd.com/taro/docs/README)、[Lodash 中文文档](https://www.lodashjs.com/)、[surmon.me](https://surmon.me/)**、**[MacWk](https://macwk.com/)。。。
 
 
 
-##媒体查询 prefers-color-scheme
+## 媒体查询 prefers-color-scheme
 
 **prefers-color-scheme** [CSS](https://developer.mozilla.org/zh-CN/docs/Web/CSS) [媒体特性](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries#media_features)用于检测用户是否有将系统的主题色设置为亮色或者暗色。
 
