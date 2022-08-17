@@ -32,4 +32,6 @@ export default defineConfig({
 
 然后可以在webstorm上面使用别名和代码提示了
 
-![16->11:13:19-YoZGy9_image](https://cdn.jsdelivr.net/gh/sunpm/oss@main/uPic/2022-08/16->11:13:19-YoZGy9_image.png)
+
+
+![image](https://upic.fassr.com/uPic/2022-08-17/09:56:10-xBiVpr_image.png)
