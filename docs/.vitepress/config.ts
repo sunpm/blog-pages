@@ -55,6 +55,6 @@ export default defineConfig({
     lastUpdatedText: '最后更新时间',
   },
   markdown: {
-    // lineNumbers: true
+    lineNumbers: true
   }
 })
