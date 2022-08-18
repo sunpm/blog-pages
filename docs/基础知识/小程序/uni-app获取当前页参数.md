@@ -2,15 +2,12 @@
 
 正常vue页面中，在onLoad()获取，uni-app文档中有，不赘述
 
-
-
 ```jsx
 onLoad: function (option) { //option为object类型，会序列化上个页面传递的参数
     console.log(option.id); //打印出上个页面传递的参数。
     console.log(option.name); //打印出上个页面传递的参数。
 }
 ```
-
 
 
 ## getCurrentPages
