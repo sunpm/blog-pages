@@ -16,8 +16,8 @@ const { nav, sidebar } = AutoNavPlugin({
 
 export default defineConfig({
   title: 'sunpm',
-  titleTemplate: 'Vite & Vue powered static site generator',
-  description: '成功少不了沉淀！',
+  titleTemplate: 'sunpm的博客',
+  description: 'web前端技术博客,专注web前端学习与总结。JavaScript,js,ES6,TypeScript,vue,React,css3,html5,Node,git,github等技术文章。',
   // base: '/blog-pages/',
   lastUpdated: true,
   lang: 'zh-CN',
