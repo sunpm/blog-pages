@@ -6,6 +6,7 @@ const matter = require('gray-matter'); // FrontMatter解析器 https://github.co
 // @ts-ignore
 const readFileList = require('./modules/readFileList.ts');
 const urlsRoot = path.join(__dirname, '..', 'urls.txt'); // 百度链接推送文件
+const publicSitemapUrl = path.join(__dirname, '..', 'docs/public', 'sitemap.txt')
 const DOMAIN = process.argv.splice(2)[0]; // 获取命令行传入的参数
 
 if (DOMAIN) {
@@ -17,6 +18,7 @@ if (DOMAIN) {
 
 function main() {
   fs.writeFileSync(urlsRoot, DOMAIN)
+  fs.writeFileSync(publicSitemapUrl, DOMAIN)
   // @ts-ignore
   const files = readFileList(); // 读取所有md文件数据
 
@@ -27,6 +29,7 @@ function main() {
       const link = `\r\n${DOMAIN}${file.filePath}`;
       console.log(`--------------------------------------------------------------------------------正在插入${index + 1}:${link}`)
       fs.appendFileSync(urlsRoot, link);
+      fs.appendFileSync(publicSitemapUrl, link);
     }
   })
 }
