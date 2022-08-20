@@ -9,7 +9,6 @@
 ```bash
 npm install highlight --save
 ```
-
 ### 1.2 配置自定义指令
 
 在nuxt的plugins文件夹内添加一个 highlight.client.js 文件，文件内容如下
@@ -50,7 +49,7 @@ Vue.use(Highlight);
 
 ```js
 plugins: [
-'~/plugins/highlight.client.js',
+  '~/plugins/highlight.client.js',
 ],
 ```
 

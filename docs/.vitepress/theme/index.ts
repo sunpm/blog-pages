@@ -1,9 +1,10 @@
-import Theme from "vitepress/theme"
+import DefaultTheme from "vitepress/theme"
+import type { Theme } from 'vitepress'
 import './styles/vars.css'
 
 export default {
-  ...Theme,
+  ...DefaultTheme,
   enhanceApp({ app }) {
     // app.component('NotFound', DefaultTheme.NotFound)
   }
-}
+} as Theme
