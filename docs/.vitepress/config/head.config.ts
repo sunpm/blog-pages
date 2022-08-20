@@ -9,6 +9,7 @@ const headConfig: HeadConfig[] = [
   ['meta', { name: 'bytedance-verification-code', content: 'yNTgJVlOI3MPXWXsd4jo' }],
   ['script',
     {},
+    // 百度搜索站长自动收录
     `
       var _hmt = _hmt || [];
       (function() {
