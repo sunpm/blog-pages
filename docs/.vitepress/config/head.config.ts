@@ -19,7 +19,20 @@ const headConfig: HeadConfig[] = [
         s.parentNode.insertBefore(hm, s);
       })();
     `
-  ]
+  ],
+  ['script',
+    {},
+    // 头条搜索站长自动收录
+    `
+      (function(){
+        var el = document.createElement("script");
+        el.src = "https://lf1-cdn-tos.bytegoofy.com/goofy/ttzz/push.js?a1eef4821911d532b3d827128030939829c2618c307e0021b181f299231aa355fd9a9dcb5ced4d7780eb6f3bbd089073c2a6d54440560d63862bbf4ec01bba3a";
+        el.id = "ttzz";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(el, s);
+      })(window)
+    `
+  ],
 ]
 
 export default headConfig
