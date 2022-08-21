@@ -2,7 +2,7 @@
 
 本来项目好好的，node升级到16之后，运行项目发生了报错
 
-```bsh
+```bash
 Node Sass does not yet support your current environment: OS X 64-bit with Unsupported runtime.
 ```
 
