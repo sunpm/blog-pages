@@ -29,12 +29,12 @@ features:
 ---
 
 
-<script setup lang="ts">
+[//]: # (<script setup lang="ts">)
 
-import IndexFooter from './components/IndexFooter.vue'
+[//]: # (import IndexFooter from './components/IndexFooter.vue')
 
+[//]: # ()
+[//]: # (</script>)
 
-</script>
-
-
-<IndexFooter />
+[//]: # ()
+[//]: # (<IndexFooter />)
