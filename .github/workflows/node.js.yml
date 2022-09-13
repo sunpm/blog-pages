@@ -40,6 +40,8 @@ jobs:
 
       - name: sync-gitee-mirror
         run: |
+          git add .
+          git commit '123'
           remote_repo="https://${{ secrets.GITEE_USERNAME }}:${{ secrets.GITEE_PASSWORD }}@gitee.com/pmun/sync-blog-pages.git"
           git remote add gitee "${remote_repo}"
           git show-ref # useful for debugging
