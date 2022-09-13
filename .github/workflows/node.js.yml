@@ -39,8 +39,12 @@ jobs:
           FOLDER: docs/.vitepress/dist # vuepress 生成的静态文件存放的地方
 
       - name: sync-gitee-mirror
-        uses: abersheeran/sync-gitee-mirror@v1-beta
-        with:
-          repository: PMun/blog-pages
-          username: ${{ secrets.GITEE_USERNAME }}
-          password: ${{ secrets.GITEE_PASSWORD }}
+        run: |
+          remote_repo="https://${{ secrets.GITEE_USERNAME }}:${{ secrets.GITEE_PASSWORD }}@gitee.com/PMun/blog-pages.git"
+          git remote add gitee "${remote_repo}"
+          git show-ref # useful for debugging
+          git branch --verbose
+          # publish all
+          git push --all --force gitee
+          git push --tags --force gitee
+        shell: bash
