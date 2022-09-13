@@ -37,16 +37,3 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN_KEY }} # 也就是我们刚才生成的 secret
           BRANCH: gh-pages # 部署到 gh-pages 分支，因为 main 分支存放的一般是源码，而 gh-pages 分支则用来存放生成的静态文件
           FOLDER: docs/.vitepress/dist # vuepress 生成的静态文件存放的地方
-
-      - name: sync-gitee-mirror
-        run: |
-          git add .
-          git commit '123'
-          remote_repo="https://${{ secrets.GITEE_USERNAME }}:${{ secrets.GITEE_PASSWORD }}@gitee.com/pmun/sync-blog-pages.git"
-          git remote add gitee "${remote_repo}"
-          git show-ref # useful for debugging
-          git branch --verbose
-          # publish all
-          git push --all --force gitee
-          git push --tags --force gitee
-        shell: bash
