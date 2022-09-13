@@ -40,7 +40,7 @@ jobs:
 
       - name: sync-gitee-mirror
         run: |
-          remote_repo="https://${{ secrets.GITEE_USERNAME }}:${{ secrets.GITEE_PASSWORD }}@gitee.com/PMun/blog-pages.git"
+          remote_repo="https://${{ secrets.GITEE_USERNAME }}:${{ secrets.GITEE_PASSWORD }}@gitee.com/pmun/sync-blog-pages.git"
           git remote add gitee "${remote_repo}"
           git show-ref # useful for debugging
           git branch --verbose
