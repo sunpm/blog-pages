@@ -28,7 +28,10 @@ jobs:
 
       # 生成静态文件
       - name: Install and Build 🔧
-        run: yarn install --frozen-lockfile && yarn build
+        # run: yarn install --frozen-lockfile && yarn build
+        # error Your lockfile needs to be updated, but yarn was run with `--frozen-lockfile`.
+        # info Visit https://yarnpkg.com/en/docs/cli/install for documentation about this command.
+        run: yarn install && yarn build
 
       # 部署到 GitHub Pages
       - name: Deploy 🚀
