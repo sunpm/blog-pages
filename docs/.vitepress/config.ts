@@ -53,6 +53,9 @@ export default defineConfig({
       { icon: 'github', link: githubLink },
     ],
     lastUpdatedText: '最后更新时间',
+    search: {
+      provider: 'local'
+    }
   },
   markdown: {
     lineNumbers: true
