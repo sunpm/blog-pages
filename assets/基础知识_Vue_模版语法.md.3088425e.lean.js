@@ -1,0 +1,1 @@
+import{_ as s,c as a,o as n,V as e}from"./chunks/framework.a7f1c75a.js";const F=JSON.parse('{"title":"模板语法","description":"","frontmatter":{},"headers":[],"relativePath":"基础知识/Vue/模版语法.md","lastUpdated":1681627181000}'),l={name:"基础知识/Vue/模版语法.md"},t=e("",37),p=[t];function o(r,c,i,d,u,D){return n(),a("div",null,p)}const y=s(l,[["render",o]]);export{F as __pageData,y as default};
