@@ -1,1 +1,0 @@
-import{_ as t,c as a,o as e,V as r}from"./chunks/framework.a7f1c75a.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"杂项/收集癖/10个黑科技网站.md","lastUpdated":1681627181000}'),p={name:"杂项/收集癖/10个黑科技网站.md"},o=r("",56),n=[o];function i(g,h,s,l,c,m){return e(),a("div",null,n)}const d=t(p,[["render",i]]);export{_ as __pageData,d as default};

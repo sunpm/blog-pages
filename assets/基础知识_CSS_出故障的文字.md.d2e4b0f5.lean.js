@@ -1,1 +1,0 @@
-import{_ as s,c as n,o as a,V as p}from"./chunks/framework.a7f1c75a.js";const i=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"基础知识/CSS/出故障的文字.md","lastUpdated":1681627181000}'),l={name:"基础知识/CSS/出故障的文字.md"},o=p("",4),e=[o];function c(r,C,t,D,F,y){return a(),n("div",null,e)}const b=s(l,[["render",c]]);export{i as __pageData,b as default};
