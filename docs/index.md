@@ -12,7 +12,7 @@ hero:
   actions:
     - theme: brand
       text: 开始
-      link: /markdown-examples
+      link: /code/javascript/determine-empty-object
     - theme: alt
       text: 在 GitHub 上查看
       link: https://github.com/sunpm/blog-pages

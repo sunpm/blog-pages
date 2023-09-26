@@ -1,4 +1,4 @@
-# [JS中判断空对象](https://www.cnblogs.com/sefaultment/p/9444345.html)
+# JS中判断空对象
 
 ### js 判断空对象
 

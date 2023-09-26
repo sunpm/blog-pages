@@ -4,6 +4,7 @@ import {search} from "./config/search";
 import {socialLinks} from "./config/social";
 import {head} from "./config/head";
 import {nav} from "./config/nav";
+import {sidebar} from "./config/sidebar";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -27,15 +28,7 @@ export default defineConfig({
       },
     ],
 
-    sidebar: [
-      {
-        text: 'Examples',
-        items: [
-          {text: 'Markdown Examples', link: '/markdown-examples'},
-          {text: 'Runtime API Examples', link: '/api-examples'}
-        ]
-      }
-    ],
+    sidebar,
 
     // 每个文章底下显示编辑按钮 https://vitepress.vuejs.org/guide/theme-edit-link.html
     editLink: {
