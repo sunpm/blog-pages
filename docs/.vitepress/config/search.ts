@@ -1,4 +1,6 @@
-export const search = {
+import {DefaultTheme} from "vitepress";
+
+export const search: {provider: "local", options?: DefaultTheme.LocalSearchOptions} = {
   provider: 'local',
   options: {
     placeholder: '搜索文档',

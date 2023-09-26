@@ -3,6 +3,7 @@ import {githubLink, runLink, userGithubLink} from "./config/url";
 import {search} from "./config/search";
 import {socialLinks} from "./config/social";
 import {head} from "./config/head";
+import {nav} from "./config/nav";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -17,9 +18,13 @@ export default defineConfig({
       dark: '/images/logo.png',
     },
     // https://vitepress.dev/reference/default-theme-config
+    // 顶部右侧导航
     nav: [
-      {text: 'Home', link: '/'},
-      {text: 'Examples', link: '/markdown-examples'}
+      ...nav,
+      {
+        text: '👋 关于我',
+        link: '/about'
+      },
     ],
 
     sidebar: [
@@ -34,7 +39,7 @@ export default defineConfig({
 
     // 每个文章底下显示编辑按钮 https://vitepress.vuejs.org/guide/theme-edit-link.html
     editLink: {
-      pattern: `${githubLink}/edit/master/docs/:path`,
+      pattern: `${githubLink}/edit/main/docs/:path`,
       text: '为此页提供修改建议'
     },
     // 社交链接 https://vitepress.vuejs.org/config/theme-configs.html#sociallinks

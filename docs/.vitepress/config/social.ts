@@ -1,6 +1,7 @@
 import {githubLink, zhihuLink} from "./url";
+import {DefaultTheme} from "vitepress";
 
-export const socialLinks = [
+export const socialLinks:  DefaultTheme.SocialLink[] = [
   {icon: 'github', link: githubLink},
   {
     icon: {
