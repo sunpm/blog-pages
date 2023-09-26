@@ -1,4 +1,3 @@
-
 export const search = {
   provider: 'local',
   options: {
