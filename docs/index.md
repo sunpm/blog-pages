@@ -4,15 +4,18 @@ layout: home
 
 hero:
   name: "飘渺的黑洞"
-  text: "欢迎来到飘渺的黑洞。有你～是黑洞存在的意义！！！"
-  tagline: My great project tagline
+  text: "欢迎您的到来"
+  tagline: "有您，才是飘渺的黑洞存在的意义！！！"
+  image:
+    src: /images/logo.png
+    alt: 飘渺的黑洞
   actions:
     - theme: brand
-      text: Markdown Examples
+      text: 开始
       link: /markdown-examples
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: 在 GitHub 上查看
+      link: https://github.com/sunpm/blog-pages
 
 features:
   - title: Feature A
