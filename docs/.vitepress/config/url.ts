@@ -16,3 +16,6 @@ export function getMiniProgramUrl(path: string) {
 export function getViteUrl(path: string) {
   return `/packing/vite${path}`
 }
+export function getVueCliUrl(path: string) {
+  return `/packing/vue-cli${path}`
+}
