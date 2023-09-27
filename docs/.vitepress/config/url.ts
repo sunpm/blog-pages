@@ -5,17 +5,17 @@ export const runLink = 'https://imaginative-valkyrie-e6ddc7.netlify.app'
 
 // javascript 笔记路径
 export function getJSUrl(path: string) {
-  return `/code/javascript${path}`
+  return `/src/javascript${path}`
 }
 // 小程序笔记路径
 export function getMiniProgramUrl(path: string) {
-  return `/code/mini-program${path}`
+  return `/src/mini-program${path}`
 }
 
 
 export function getViteUrl(path: string) {
-  return `/packing/vite${path}`
+  return `/src/vite${path}`
 }
 export function getVueCliUrl(path: string) {
-  return `/packing/vue-cli${path}`
+  return `/src/vue-cli${path}`
 }

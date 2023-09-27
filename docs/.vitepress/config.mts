@@ -4,7 +4,7 @@ import {search} from "./config/search";
 import {socialLinks} from "./config/social";
 import {head} from "./config/head";
 import {nav} from "./config/nav";
-import {sidebar} from "./config/sidebar";
+import AutoSidebar from 'vite-plugin-vitepress-auto-sidebar';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -28,8 +28,6 @@ export default defineConfig({
       },
     ],
 
-    sidebar,
-
     // 每个文章底下显示编辑按钮 https://vitepress.vuejs.org/guide/theme-edit-link.html
     editLink: {
       pattern: `${githubLink}/edit/main/docs/:path`,
@@ -47,4 +45,12 @@ export default defineConfig({
     hostname: runLink
   },
   lastUpdated: true,
+  vite: {
+    plugins: [
+      AutoSidebar({
+        path: '/docs',
+        titleFromFile: true
+      })
+    ]
+  }
 })
