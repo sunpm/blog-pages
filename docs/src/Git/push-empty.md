@@ -1,4 +1,4 @@
-# [Git提交空文件夹的技巧](https://www.cnblogs.com/EasonJim/p/9152919.html)
+# Git提交空文件夹的技巧
 
 这个只能说是技巧不能说是方法，原理是在每个空文件夹新建一个.gitignore文件，然后提交。
 
