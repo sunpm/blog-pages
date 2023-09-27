@@ -9,7 +9,7 @@ import AutoSidebar from 'vite-plugin-vitepress-auto-sidebar';
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "飘渺的黑洞",
-  description: "欢迎来到飘渺的黑洞。有你～是黑洞存在的意义！！！",
+  description: "个人技术知识库，记录 & 分享个人碎片化、结构化、体系化的技术知识内容。",
   lang: 'zh-CN',
   head,
   themeConfig: {

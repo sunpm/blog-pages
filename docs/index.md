@@ -4,8 +4,8 @@ layout: home
 
 hero:
   name: "飘渺的黑洞"
-  text: "欢迎您的到来"
-  tagline: "有您，才是飘渺的黑洞存在的意义！！！"
+  text: "专注 & 洞察 & 分享"
+  tagline: 个人技术知识库，记录 & 分享个人碎片化、结构化、体系化的技术知识内容。
   image:
     src: /images/logo.png
     alt: 飘渺的黑洞
