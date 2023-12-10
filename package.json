@@ -5,11 +5,11 @@
     "docs:preview": "vitepress preview docs"
   },
   "devDependencies": {
-    "vitepress": "1.0.0-rc.20",
+    "vitepress": "1.0.0-rc.31",
     "vitepress-plugin-nprogress": "^0.0.4"
   },
   "dependencies": {
     "vite-plugin-vitepress-auto-sidebar": "^1.6.1",
-    "vitepress-plugin-comment-with-giscus": "^1.1.7"
+    "vitepress-plugin-comment-with-giscus": "^1.1.11"
   }
 }
