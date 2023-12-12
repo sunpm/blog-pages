@@ -4,7 +4,7 @@ export const search: {provider: "algolia", options?: DefaultTheme.AlgoliaSearchO
   provider: 'algolia',
   options: {
     appId: 'AVHX5L7RX9',
-    apiKey: '4f9d21341dd4c19ac9d16c53b4709c29',
+    apiKey: '76df6edf5d3ec79b515130970218160e',
     indexName: 'fassr',
     placeholder: '搜索文档',
     translations: {
