@@ -1,16 +1,19 @@
 import {DefaultTheme} from "vitepress";
 
-export const search: {provider: "local", options?: DefaultTheme.LocalSearchOptions} = {
-  provider: 'local',
+export const search: {provider: "algolia", options?: DefaultTheme.AlgoliaSearchOptions} = {
+  provider: 'algolia',
   options: {
-    // placeholder: '搜索文档',
+    appId: 'AVHX5L7RX9',
+    apiKey: '4f9d21341dd4c19ac9d16c53b4709c29',
+    indexName: 'fassr',
+    placeholder: '搜索文档',
     translations: {
       button: {
         buttonText: '搜索文档',
         buttonAriaLabel: '搜索文档'
       },
       modal: {
-        /*searchBox: {
+        searchBox: {
           resetButtonTitle: '清除查询条件',
           resetButtonAriaLabel: '清除查询条件',
           cancelButtonText: '取消',
@@ -33,13 +36,11 @@ export const search: {provider: "local", options?: DefaultTheme.LocalSearchOptio
           suggestedQueryText: '你可以尝试查询',
           reportMissingResultsText: '你认为该查询应该有结果？',
           reportMissingResultsLinkText: '点击反馈'
-        },*/
-        noResultsText: '搜索不到',
+        },
         footer: {
           selectText: '选择',
           navigateText: '切换',
           closeText: '关闭',
-
         },
       }
     }
