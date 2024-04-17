@@ -5,6 +5,7 @@ import 'vitepress-plugin-nprogress/lib/css/index.css'
 import giscusTalk from 'vitepress-plugin-comment-with-giscus';
 import { useData, useRoute } from 'vitepress';
 import './styles/vars.css'
+import Layout from "./Layout.vue";
 
 export default {
   ...DefaultTheme,
@@ -12,6 +13,7 @@ export default {
     vitepressNprogress(ctx)
     // app.component('NotFound', DefaultTheme.NotFound)
   },
+  Layout,
   setup() {
     // Get frontmatter and route
     const { frontmatter } = useData();
