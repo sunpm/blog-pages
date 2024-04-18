@@ -2,14 +2,19 @@
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
-  },
-  "devDependencies": {
-    "vitepress": "^1.1.0",
-    "vitepress-plugin-nprogress": "^0.0.4"
+    "docs:preview": "vitepress preview docs",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "vite-plugin-vitepress-auto-sidebar": "^1.6.1",
     "vitepress-plugin-comment-with-giscus": "^1.1.11"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.43.1",
+    "@unocss/eslint-config": "^0.54.3",
+    "eslint": "^8.57.0",
+    "vitepress": "^1.1.0",
+    "vitepress-plugin-nprogress": "^0.0.4"
   }
 }
