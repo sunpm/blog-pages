@@ -12,7 +12,6 @@ export function getMiniProgramUrl(path: string) {
   return `/src/mini-program${path}`
 }
 
-
 export function getViteUrl(path: string) {
   return `/src/vite${path}`
 }
