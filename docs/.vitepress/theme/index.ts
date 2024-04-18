@@ -1,11 +1,11 @@
-import DefaultTheme from "vitepress/theme"
+import DefaultTheme from 'vitepress/theme'
 import type { Theme } from 'vitepress'
 import vitepressNprogress from 'vitepress-plugin-nprogress'
 import 'vitepress-plugin-nprogress/lib/css/index.css'
-import giscusTalk from 'vitepress-plugin-comment-with-giscus';
-import { useData, useRoute } from 'vitepress';
+import giscusTalk from 'vitepress-plugin-comment-with-giscus'
+import { useData, useRoute } from 'vitepress'
 import './styles/vars.css'
-import Layout from "./Layout.vue";
+import Layout from './Layout.vue'
 
 export default {
   ...DefaultTheme,
@@ -16,8 +16,8 @@ export default {
   Layout,
   setup() {
     // Get frontmatter and route
-    const { frontmatter } = useData();
-    const route = useRoute();
+    const { frontmatter } = useData()
+    const route = useRoute()
 
     // Obtain configuration from: https://giscus.app/
     giscusTalk({
@@ -30,7 +30,7 @@ export default {
       lang: 'zh-CN', // default: `zh-CN`
       // ...
     }, {
-      frontmatter, route
-    });
-  }
+      frontmatter, route,
+    })
+  },
 } as Theme

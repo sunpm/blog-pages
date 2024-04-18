@@ -1,4 +1,4 @@
-import {HeadConfig} from 'vitepress'
+import type { HeadConfig } from 'vitepress'
 
 export const head: HeadConfig[] = [
   ['link', { rel: 'icon', href: '/images/logo.png' }],
@@ -18,7 +18,7 @@ export const head: HeadConfig[] = [
         var s = document.getElementsByTagName("script")[0]; 
         s.parentNode.insertBefore(hm, s);
       })();
-    `
+    `,
   ],
   ['script',
     {},
@@ -31,7 +31,6 @@ export const head: HeadConfig[] = [
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(el, s);
       })(window)
-    `
+    `,
   ],
 ]
-
