@@ -13,7 +13,9 @@
   "devDependencies": {
     "@antfu/eslint-config": "^0.43.1",
     "@unocss/eslint-config": "^0.54.3",
+    "@vite-pwa/vitepress": "^0.4.0",
     "eslint": "^8.57.0",
+    "unocss": "^0.59.3",
     "vitepress": "^1.1.0",
     "vitepress-plugin-nprogress": "^0.0.4"
   }

@@ -6,6 +6,7 @@ import giscusTalk from 'vitepress-plugin-comment-with-giscus'
 import { useData, useRoute } from 'vitepress'
 import './styles/vars.css'
 import Layout from './Layout.vue'
+import 'virtual:uno.css'
 
 export default {
   ...DefaultTheme,
