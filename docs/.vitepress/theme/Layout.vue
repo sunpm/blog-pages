@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useData } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
-import { nextTick, provide, ref } from 'vue'
+import { nextTick, provide } from 'vue'
 
 const { isDark } = useData()
 
@@ -38,23 +38,10 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
     },
   )
 })
-
-const friendList = ref([
-  'xmg',
-  'antfu',
-])
 </script>
 
 <template>
-  <DefaultTheme.Layout>
-    <template #doc-before>
-      <div flex-center>
-        <h2 v-for="item in friendList">
-          {{ item }}
-        </h2>
-      </div>
-    </template>
-  </DefaultTheme.Layout>
+  <DefaultTheme.Layout />
 </template>
 
 <style>
