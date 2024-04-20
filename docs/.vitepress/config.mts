@@ -1,7 +1,6 @@
 import { defineConfig } from 'vitepress'
 import Unocss from 'unocss/vite'
 import AutoSidebar from 'vite-plugin-vitepress-auto-sidebar'
-import { withPwa } from '@vite-pwa/vitepress'
 import { githubLink, runLink, userGithubLink } from './config/url'
 import { search } from './config/search'
 import { socialLinks } from './config/social'
@@ -9,7 +8,7 @@ import { head } from './config/head'
 import { nav } from './config/nav'
 
 // https://vitepress.dev/reference/site-config
-export default withPwa(defineConfig({
+export default defineConfig({
   title: '飘渺的黑洞',
   description: '个人技术知识库，记录 & 分享个人碎片化、结构化、体系化的技术知识内容。',
   lang: 'zh-CN',
@@ -60,6 +59,4 @@ export default withPwa(defineConfig({
       }),
     ],
   },
-  pwa: {},
-}),
-)
+})
