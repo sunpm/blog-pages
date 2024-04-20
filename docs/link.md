@@ -1,4 +1,6 @@
 ---
+layout: home
+
 head:
   - - meta
     - name: description
@@ -6,6 +8,7 @@ head:
       
 editLink: false
 lastUpdated: false
+outline: false
 ---
 
 # 友情链接
