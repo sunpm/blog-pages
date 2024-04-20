@@ -22,5 +22,5 @@ aside: false
 
 1. 网站名称：飘渺的黑洞
 2. 网站地址：https://blog.fassr.com
-3. 网站简介：个人技术知识库，记录 & 分享个人碎片化、结构化、体系化的技术知识内容。
+3. 网站简介：一个小小网站，记录为学习付出努力而不该忘记的知识。
 4. 网站头像：https://blog.fassr.com/images/logo.png
