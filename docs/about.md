@@ -1,6 +1,4 @@
 ---
-layout: home
-
 head:
   - - meta
     - name: description

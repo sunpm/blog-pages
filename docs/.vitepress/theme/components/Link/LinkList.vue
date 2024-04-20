@@ -22,7 +22,7 @@ const list = ref<LinkItemData[]>([
 </script>
 
 <template>
-  <div class="vp-raw" grid="~ lg:cols-3 md:cols-2 sm:cols-1" gap="4" m="y-8">
+  <div class="vp-raw" grid="~ md:cols-2 sm:cols-1" gap="4" m="y-8">
     <LinkItem v-for="(item, index) in list" :key="index" :data="item" />
   </div>
 </template>
