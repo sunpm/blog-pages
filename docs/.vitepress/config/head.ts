@@ -2,7 +2,7 @@ import type { HeadConfig } from 'vitepress'
 
 export const head: HeadConfig[] = [
   ['link', { rel: 'icon', href: '/images/logo.png' }],
-  ['meta', { name: 'keywords', content: '前端博客,个人技术博客,前端,前端开发,前端框架,web前端,前端面试题,技术文档,学习,面试,JavaScript,js,ES6,TypeScript,vue,css3,html5,Node,git,github,markdown' }],
+  ['meta', { name: 'keywords', content: 'sunpm,isunpm,飘渺的黑洞,viteptess博客,网站导航,阿里云资源' }],
   // 百度搜索站长验证
   ['meta', { name: 'baidu-site-verification', content: 'code-a1SrlwvDIN' }],
   // 头条搜索站长验证

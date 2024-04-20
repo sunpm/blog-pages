@@ -24,6 +24,10 @@ export default defineConfig({
     nav: [
       ...nav,
       {
+        text: '🫶🏻 友情链接',
+        link: '/link',
+      },
+      {
         text: '👋 关于我',
         link: '/about',
       },
@@ -36,7 +40,7 @@ export default defineConfig({
     },
     // 社交链接 https://vitepress.vuejs.org/config/theme-configs.html#sociallinks
     footer: {
-      message: 'Released under the <a href="https://github.com/vuejs/vitepress/blob/main/LICENSE">MIT License</a>.',
+      message: 'Released under the <a href="https://github.com/sunpm/blog-pages/blob/main/LICENSE">MIT License</a>.',
       copyright: `Copyright © 2022-present  <a href="${userGithubLink}">Sunpm</a>`,
     },
     socialLinks,
