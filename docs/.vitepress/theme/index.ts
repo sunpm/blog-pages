@@ -4,14 +4,17 @@ import vitepressNprogress from 'vitepress-plugin-nprogress'
 import 'vitepress-plugin-nprogress/lib/css/index.css'
 import giscusTalk from 'vitepress-plugin-comment-with-giscus'
 import { useData, useRoute } from 'vitepress'
+import 'virtual:uno.css'
 import './styles/vars.css'
 import Layout from './Layout.vue'
-import 'virtual:uno.css'
+import LinkList from './components/Link/LinkList.vue'
 
 export default {
   ...DefaultTheme,
   enhanceApp(ctx) {
+    const { app } = ctx
     vitepressNprogress(ctx)
+    app.component('LinkList', LinkList)
     // app.component('NotFound', DefaultTheme.NotFound)
   },
   Layout,
