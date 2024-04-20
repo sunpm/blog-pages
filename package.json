@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
@@ -14,6 +15,7 @@
     "@antfu/eslint-config": "^0.43.1",
     "@unocss/eslint-config": "^0.54.3",
     "eslint": "^8.57.0",
+    "postcss": "^8.4.38",
     "unocss": "^0.59.3",
     "vitepress": "^1.1.0",
     "vitepress-plugin-nprogress": "^0.0.4"

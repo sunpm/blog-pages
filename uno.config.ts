@@ -33,12 +33,15 @@ export default defineConfig({
     'absolute-br': 'absolute-rb',
 
     //   background
-    'bg-main': 'bg-$c-main',
+    'bg-brand': 'bg-$vp-c-brand',
+    'bg-brand-light': 'bg-$vp-c-brand-light',
+    'bg-brand-dark': 'bg-$vp-c-brand-dark',
     'bg-secondary': 'bg-$c-text-secondary',
     'bg-active': 'bg-$c-bg-active',
 
     // text colors
     'text-base': 'text-$c-text-base',
+    'text-inverse': 'text-$vp-c-text-inverse-1',
     'text-main': 'text-$c-main',
     'text-secondary': 'text-$c-text-secondary',
 
