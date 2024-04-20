@@ -4,8 +4,8 @@ layout: home
 
 hero:
   name: "飘渺的黑洞"
-  text: "专注 & 洞察 & 分享"
-  tagline: 个人技术知识库，记录 & 分享个人碎片化、结构化、体系化的技术知识内容。
+  text: "学习 & 思考 & 分享"
+  tagline: 一个小小网站，记录为学习付出努力而不该忘记的知识。
   image:
     src: /images/logo.png
     alt: 飘渺的黑洞

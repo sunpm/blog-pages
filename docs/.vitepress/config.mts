@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import Unocss from 'unocss/vite'
+import AutoSidebar from 'vite-plugin-vitepress-auto-sidebar'
 import { githubLink, runLink, userGithubLink } from './config/url'
 import { search } from './config/search'
 import { socialLinks } from './config/social'
@@ -10,7 +11,7 @@ import { getPosts } from './theme/serverUtils'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: '飘渺的黑洞',
-  description: '个人技术知识库，记录 & 分享个人碎片化、结构化、体系化的技术知识内容。',
+  description: '一个小小网站，记录为学习付出努力而不该忘记的知识。',
   lang: 'zh-CN',
   head,
   themeConfig: {
@@ -46,7 +47,7 @@ export default defineConfig({
     // 社交链接 https://vitepress.vuejs.org/config/theme-configs.html#sociallinks
     footer: {
       message: 'Released under the <a href="https://github.com/sunpm/blog-pages/blob/main/LICENSE">MIT License</a>.',
-      copyright: `Copyright © 2022-present  <a href="${userGithubLink}">Sunpm</a>`,
+      copyright: `Copyright © 2022-present  <a href="${userGithubLink}">sunpm</a>`,
     },
     socialLinks,
     search,
@@ -58,10 +59,10 @@ export default defineConfig({
   vite: {
     plugins: [
       Unocss(),
-      /* AutoSidebar({
+      AutoSidebar({
         path: '/docs',
         titleFromFile: true,
-      }), */
+      }),
     ],
   },
 })

@@ -7,10 +7,8 @@ export async function getPosts() {
   const posts = await Promise.all(
     paths.map(async (item) => {
       const content = await fs.readFile(item, 'utf-8')
-      // 获取文件创建时间
-      const { birthtime } = fs.statSync(item)
       const { data } = matter(content)
-      data.date = _convertDate(birthtime)
+      data.date = _convertDate(data.date)
       // 如果没有标题，则使用文件名
       data.title = data.title || item.split('/').pop().split('.')[0]
       return {

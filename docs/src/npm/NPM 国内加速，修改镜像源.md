@@ -20,13 +20,13 @@ npm config get registry
 
 1. 临时修改
   ```bash
-  npm install 软件名 --registry https://npmmirror.com
+  npm install 软件名 --registry https://registry.npmmirror.com
   ```
 
   
 2. 全局修改
   ```bash
-  npm config set registry https://npmmirror.com
+  npm config set registry https://registry.npmmirror.com
   ```
 
   
