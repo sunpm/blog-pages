@@ -7,7 +7,7 @@ import { useData, useRoute } from 'vitepress'
 import 'virtual:uno.css'
 import './styles/vars.css'
 import Layout from './Layout.vue'
-import LinkList from './components/Link/LinkList.vue'
+import { Archives, LinkList } from './components'
 
 export default {
   ...DefaultTheme,
@@ -15,6 +15,7 @@ export default {
     const { app } = ctx
     vitepressNprogress(ctx)
     app.component('LinkList', LinkList)
+    app.component('Archives', Archives)
     // app.component('NotFound', DefaultTheme.NotFound)
   },
   Layout,

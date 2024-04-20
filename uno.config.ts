@@ -40,9 +40,9 @@ export default defineConfig({
     'bg-active': 'bg-$c-bg-active',
 
     // text colors
-    'text-base': 'text-$c-text-base',
-    'text-inverse': 'text-$vp-c-text-inverse-1',
-    'text-main': 'text-$c-main',
+    'text-main-1': 'text-$vp-c-brand-1',
+    'text-c-1': 'text-$vp-c-text-1',
+    'text-c-inverse-1': 'text-$vp-c-text-inverse-1',
     'text-secondary': 'text-$c-text-secondary',
 
     'text-icon': 'mr-10px mt-2px h-20px w-20px',

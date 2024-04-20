@@ -1,11 +1,11 @@
 import { defineConfig } from 'vitepress'
 import Unocss from 'unocss/vite'
-import AutoSidebar from 'vite-plugin-vitepress-auto-sidebar'
 import { githubLink, runLink, userGithubLink } from './config/url'
 import { search } from './config/search'
 import { socialLinks } from './config/social'
 import { head } from './config/head'
 import { nav } from './config/nav'
+import { getPosts } from './theme/serverUtils'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -19,13 +19,18 @@ export default defineConfig({
       light: '/images/logo.png',
       dark: '/images/logo.png',
     },
+    posts: await getPosts(),
     // https://vitepress.dev/reference/default-theme-config
     // 顶部右侧导航
     nav: [
       ...nav,
       {
-        text: '🫶🏻 友情链接',
+        text: '🤝 友情链接',
         link: '/link',
+      },
+      {
+        text: '🫣 归档',
+        link: '/archives',
       },
       {
         text: '👋 关于我',
@@ -53,10 +58,10 @@ export default defineConfig({
   vite: {
     plugins: [
       Unocss(),
-      AutoSidebar({
+      /* AutoSidebar({
         path: '/docs',
         titleFromFile: true,
-      }),
+      }), */
     ],
   },
 })
