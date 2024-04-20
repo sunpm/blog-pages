@@ -18,11 +18,14 @@ hero:
       link: https://github.com/sunpm/blog-pages
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - icon: ✍️
+    title: 学习
+    details: 没有与生俱来的本领，只有学无止境的知识。
+  - icon: 🧠
+    title: 思考
+    details: 学而不思则罔，思而不学则殆。
+  - icon: 📝
+    title: 分享
+    details: 通过向别人分享，来检验自己是否真的学会。
 ---
 
