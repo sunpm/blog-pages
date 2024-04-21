@@ -1,7 +1,7 @@
 import { META } from '../../config/app.config'
 
 function initCopyright() {
-  if (import.meta.env.SSR) {
+  if (import.meta.env.SSR || import.meta.env.DEV) {
     return
   }
   const copyText = () => {
