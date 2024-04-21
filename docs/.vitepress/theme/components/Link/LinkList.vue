@@ -14,7 +14,7 @@ const list = ref<LinkItemData[]>([
   },
   {
     name: 'Sure Wang',
-    url: 'https://surewang.top',
+    url: 'https://www.thez.cc/',
     icon: 'https://avatars.githubusercontent.com/u/67545604?v=4',
     description: 'hard hard and try again. ',
   },
