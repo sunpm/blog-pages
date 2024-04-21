@@ -1,3 +1,12 @@
+---
+title: VSC为什么自动补全后引号内变成灰色，导致引号内智能感知失效？
+description: VSC为什么自动补全后引号内变成灰色，导致引号内智能感知失效？有两种可能：。
+date: 2020-02-01 18:00:30
+tags:
+  - 编辑器
+  - VS Code
+---
+
 # VSC为什么自动补全后引号内变成灰色，导致引号内智能感知失效？
 
 > VS Code版本：**version 1.36.1** 操作系统：**win10**
@@ -31,8 +40,10 @@
 有两种可能：
 
 ```json
-"editor.quickSuggestions": { "other": true, "comments": false, "strings": true },
-"editor.suggest.snippetsPreventQuickSuggestions": false,
+{
+  "editor.quickSuggestions": { "other": true, "comments": false, "strings": true },
+  "editor.suggest.snippetsPreventQuickSuggestions": false
+}
 ```
 
 或者什么也不改，手动按ctrl加space也能触发（前提是你用的是纯英文输入法）。
