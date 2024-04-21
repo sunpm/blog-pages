@@ -20,7 +20,7 @@ export interface LinkItemData {
       <p font="bold" text="lg">
         {{ data.name }}
       </p>
-      <p m="t-1" text="sm" line-clamp="2">
+      <p m="t-1" text="sm" line-clamp="2" min="h-3em">
         {{ data.description }}
       </p>
     </div>
