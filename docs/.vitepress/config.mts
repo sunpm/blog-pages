@@ -62,6 +62,7 @@ export default defineConfig({
       AutoSidebar({
         path: '/docs',
         titleFromFile: true,
+        ignoreList: ['components'],
       }),
     ],
   },
