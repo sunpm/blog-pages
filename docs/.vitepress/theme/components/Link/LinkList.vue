@@ -8,9 +8,15 @@ defineOptions({
 })
 const list = ref<LinkItemData[]>([
   {
+    name: 'Anthony Fu',
+    url: 'https://antfu.me/',
+    icon: 'https://mphy.me/favicon.png',
+    description: 'A ship in harbor is safe, but that is not what ships are built for.',
+  },
+  {
     name: 'MurphyChen',
     url: 'https://mphy.me/',
-    icon: 'https://mphy.me/favicon.png',
+    icon: 'https://avatars.githubusercontent.com/u/11247099',
     description: 'Working with Java&Vue, focusing on React/Vue/TS.\n'
         + 'Intrested in music science fiction, including movies, books.\n'
         + 'Be passionate about the internet and frontend technology.',
@@ -20,6 +26,12 @@ const list = ref<LinkItemData[]>([
     url: 'https://www.thez.cc/',
     icon: 'https://raw.githubusercontent.com/geekris1/geekris1.me/master/public/icon.jpg',
     description: 'Excel at chatting more than coding.',
+  },
+  {
+    name: 'Sugar',
+    url: 'https://sugarat.top/',
+    icon: 'https://avatars.githubusercontent.com/u/42485491',
+    description: '你的指尖,拥有改变世界的力量😄',
   },
 ])
 </script>
