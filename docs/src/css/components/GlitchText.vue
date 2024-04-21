@@ -1,21 +1,28 @@
-# 出故障的文字
+<script setup>
 
-```html
-<div class="glitch" data-text="GLITCH">GLITCH</div> 
-```
+</script>
 
-```css
-body {
+<template>
+  <div class="glitch-box">
+    <div class="glitch" data-text="SUNPM">
+      SUNPM
+    </div>
+  </div>
+</template>
+
+<style scoped>
+.glitch-box {
+  text-align: center;
+}
+.glitch {
   background: black;
   font-family: 'Varela', sans-serif;
-}
-
-.glitch {
   color: white;
   font-size: 100px;
   position: relative;
-  width: 400px;
   margin: 0 auto;
+  line-height: 1;
+  display: inline-block;
 }
 
 @keyframes noise-anim {
@@ -173,8 +180,4 @@ body {
   clip: rect(0, 900px, 0, 0);
   animation: noise-anim-2 3s infinite linear alternate-reverse;
 }
-```
-
-故障文本看起来总是很酷。这个案例没有使用 GIF，仅用 JavaScript 或 HTML 就实现了生动的特效。 如果你想为你的网站添加小故障效果，请参考它。
-
-[查看演示](https://codepen.io/lbebber/pen/ypgql)
+</style>
