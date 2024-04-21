@@ -10,7 +10,7 @@ import { getPosts } from './theme/serverUtils'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: '飘渺的黑洞',
+  title: 'Sun .P.M',
   description: '一个小小网站，记录为学习付出努力而不该忘记的知识。',
   lang: 'zh-CN',
   head,

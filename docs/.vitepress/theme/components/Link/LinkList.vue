@@ -13,10 +13,10 @@ const list = ref<LinkItemData[]>([
         + 'Be passionate about the internet and frontend technology.',
   },
   {
-    name: 'geekris1',
-    url: 'https://www.thez.cc/',
-    icon: 'https://www.thez.cc/logo.png',
-    description: 'geekris1的个人博客，用来记录自己的学习',
+    name: 'Sure Wang',
+    url: 'https://surewang.top',
+    icon: 'https://avatars.githubusercontent.com/u/67545604?v=4',
+    description: 'hard hard and try again. ',
   },
 ])
 </script>

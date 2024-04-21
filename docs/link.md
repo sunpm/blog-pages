@@ -20,7 +20,7 @@ aside: false
 
 ## 申请格式
 
-1. 网站名称：飘渺的黑洞
+1. 网站名称：Sun .P.M
 2. 网站地址：https://blog.fassr.com
 3. 网站简介：一个小小网站，记录为学习付出努力而不该忘记的知识。
 4. 网站头像：https://blog.fassr.com/images/logo.png

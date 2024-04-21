@@ -3,12 +3,12 @@
 layout: home
 
 hero:
-  name: "飘渺的黑洞"
+  name: "Sun .P.M"
   text: "学习 & 思考 & 分享"
   tagline: 一个小小网站，记录为学习付出努力而不该忘记的知识。
   image:
     src: /images/logo.png
-    alt: 飘渺的黑洞
+    alt: Sun .P.M
   actions:
     - theme: brand
       text: 开始
