@@ -1,13 +1,16 @@
 <script setup lang="ts">
+defineOptions({
+  name: 'LinkItem',
+})
+defineProps<{
+  data: LinkItemData
+}>()
 export interface LinkItemData {
   name: string
   url: string
   icon: string
   description: string
 }
-defineProps<{
-  data: LinkItemData
-}>()
 </script>
 
 <template>

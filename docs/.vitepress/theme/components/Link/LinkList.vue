@@ -3,6 +3,9 @@ import { ref } from 'vue'
 import type { LinkItemData } from './LinkItem.vue'
 import LinkItem from './LinkItem.vue'
 
+defineOptions({
+  name: 'LinkList',
+})
 const list = ref<LinkItemData[]>([
   {
     name: 'MurphyChen',

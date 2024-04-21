@@ -6,16 +6,16 @@ import giscusTalk from 'vitepress-plugin-comment-with-giscus'
 import { useData, useRoute } from 'vitepress'
 import 'virtual:uno.css'
 import './styles/vars.css'
+import { copyright, globalComponents } from './plugins'
 import Layout from './Layout.vue'
-import { Archives, LinkList } from './components'
 
 export default {
   ...DefaultTheme,
   enhanceApp(ctx) {
     const { app } = ctx
     vitepressNprogress(ctx)
-    app.component('LinkList', LinkList)
-    app.component('Archives', Archives)
+    app.use(globalComponents)
+    app.use(copyright)
     // app.component('NotFound', DefaultTheme.NotFound)
   },
   Layout,
