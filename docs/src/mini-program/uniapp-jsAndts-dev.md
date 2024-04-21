@@ -1,12 +1,19 @@
+---
+title: uniapp项目中JS和TS混合使用
+description: 作用是.js和.ts可以互相引入并使用内部资源，例如可以将vuex使用ts编写并在vue中使用（这个很重要了：不是在vue模板中添加lang=ts去使用ts语法）
+date: 2020-02-01 18:00:30
+tags:
+  - 小程序
+  - typescript
+  - uniapp
+  - javascript
+---
+
 # uniapp项目中JS和TS混合使用
 
 > 重点：作用是.js和.ts可以互相引入并使用内部资源，例如可以将vuex使用ts编写并在vue中使用（这个很重要了：不是在vue模板中添加lang=ts去使用ts语法）
 
-
-
 > 重点：作用是.js和.ts可以互相引入并使用内部资源，例如可以将vuex使用ts编写并在vue中使用（这个很重要了：不是在vue模板中添加lang=ts去使用ts语法）
-
-
 
 > 重点：作用是.js和.ts可以互相引入并使用内部资源，例如可以将vuex使用ts编写并在vue中使用（这个很重要了：不是在vue模板中添加lang=ts去使用ts语法）
 
@@ -34,8 +41,7 @@ npm install typescript @vue/cli-plugin-typescript @babel/plugin-syntax-typescrip
 
 这个可以按照您以往的ts习惯去配置，我只是从uniapp官方的ts模板中copy下来直接使用
 
-```typescript
-// 配置tsconfig.json
+```json
 {
   "compilerOptions": {
     "target": "esnext",

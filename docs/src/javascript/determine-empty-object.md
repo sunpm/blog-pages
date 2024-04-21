@@ -1,3 +1,11 @@
+---
+title: JS中判断空对象
+description: JS中判断是否空对象的三种方案。
+date: 2020-02-01 18:00:30
+tags:
+  - javascript
+---
+
 # JS中判断空对象
 
 
@@ -22,7 +30,7 @@
 
 解决方案：
 
-## 方案 1：
+## 方案 1
 
 ```js
 var data = {};
@@ -30,7 +38,7 @@ var b = JSON.stringify(data) == "{}";
 alert(b); //true
 ```
 
-## 方案 2：
+## 方案 2
 
 ```js
 Object.keys(obj) // 返回不包括原型上的可枚举属性，即自身的可枚举属性
@@ -53,7 +61,7 @@ var b=isEmptyObj(data);
 console.log(b);
 ```
 
-## 方案 3：
+## 方案 3
 
 ```js
 Objcet.getOwnPropertyNames(obj) // 返回不包括原型上的所有自身属性(包括不可枚举的属性)

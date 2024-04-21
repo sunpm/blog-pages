@@ -1,3 +1,11 @@
+---
+title: 修改tsconfig配置，让ts不写任何的类型
+description: 如果你想在 TypeScript 文件中不强制写任何类型注解，可以通过修改 `tsconfig.json` 配置文件来实现。下面是修改的步骤：。
+date: 2020-02-01 18:00:30
+tags:
+  - typescript
+---
+
 # 修改tsconfig配置，让ts不写任何的类型
 
 如果你想在 TypeScript 文件中不强制写任何类型注解，可以通过修改 `tsconfig.json` 配置文件来实现。下面是修改的步骤：
@@ -7,12 +15,18 @@
 3. 在 `compilerOptions` 对象中添加或修改以下属性：
 
 ```json
-"noImplicitAny": false,
-"strictNullChecks": false,
-"strictFunctionTypes": false,
-"strictPropertyInitialization": false,
-"strictBindCallApply": false,
-"strict": false
+{
+  // ...
+  "compilerOptions": {
+    // ...
+    "noImplicitAny": false,
+    "strictNullChecks": false,
+    "strictFunctionTypes": false,
+    "strictPropertyInitialization": false,
+    "strictBindCallApply": false,
+    "strict": false
+  }
+}
 ```
 
 ```

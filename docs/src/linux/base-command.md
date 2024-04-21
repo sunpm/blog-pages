@@ -1,3 +1,11 @@
+---
+title: linux 基本命令
+description: 记录常用的 linux 基本命令。
+date: 2020-02-01 18:00:30
+tags:
+  - linux
+---
+
 # linux 基本命令
 
 1. 进入目录
