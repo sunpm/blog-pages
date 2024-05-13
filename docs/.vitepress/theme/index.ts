@@ -6,7 +6,7 @@ import giscusTalk from 'vitepress-plugin-comment-with-giscus'
 import { useData, useRoute } from 'vitepress'
 import 'virtual:uno.css'
 import './styles/vars.css'
-import { copyright, globalComponents } from './plugins'
+import { globalComponents } from './plugins'
 import Layout from './Layout.vue'
 
 export default {
@@ -15,7 +15,8 @@ export default {
     const { app } = ctx
     vitepressNprogress(ctx)
     app.use(globalComponents)
-    app.use(copyright)
+    // 暂时关闭复制水印
+    // app.use(copyright)
     // app.component('NotFound', DefaultTheme.NotFound)
   },
   Layout,
