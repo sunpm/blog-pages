@@ -2,9 +2,7 @@
 title: 出故障的文字
 description: 故障文本看起来总是很酷。如果你想为你的网站添加小故障效果，请参考它。
 date: 2020-02-01 18:00:30
-tags:
-  - 特效
-  - css
+tags: ['特效', 'css']
 ---
 
 <script setup>

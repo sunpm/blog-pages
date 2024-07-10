@@ -10,4 +10,14 @@
     --vp-font-family-mono: "LXGW WenKai Mono", ui-monospace, SFMono-Regular,
     "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
     monospace;
+
+    --vp-c-text-1: rgba(0,0,0);
+    --vp-c-text-2: rgba(0,0,0, 0.78);
+    --vp-c-text-3: rgba(0,0,0, 0.56);
+}
+
+.dark {
+    --vp-c-text-1: rgba(255, 255, 245, 0.86);
+    --vp-c-text-2: rgba(235, 235, 245, 0.7);
+    --vp-c-text-3: rgba(235, 235, 245, 0.48);
 }
