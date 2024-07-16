@@ -1,9 +1,10 @@
 import type { App } from 'vue'
-import { Archives, LinkList } from '../components'
+import { Archives, LinkList, TagsList } from '../components'
 
 const components = [
   LinkList,
   Archives,
+  TagsList,
 ]
 
 export const globalComponents = {

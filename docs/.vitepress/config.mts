@@ -34,6 +34,10 @@ export default defineConfig({
         link: '/archives',
       },
       {
+        text: '🏷️ 标签',
+        link: '/tags',
+      },
+      {
         text: '👋 关于我',
         link: '/about',
       },
