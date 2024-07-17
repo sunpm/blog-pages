@@ -2,8 +2,8 @@
 import { withBase } from 'vitepress'
 import { computed } from 'vue'
 import { useTitle, useUrlSearchParams } from '@vueuse/core'
+import { NCard, NGrid, NGridItem } from 'naive-ui'
 import { useTags } from '../../composables'
-import ArchivesList from '../Archives/ArchivesList.vue'
 import { META } from '../../../config/app.config'
 
 defineOptions({
@@ -13,7 +13,6 @@ const { getTagsList, filterTagsPosts } = useTags()
 const { tag } = useUrlSearchParams()
 const data = computed(() => getTagsList())
 const posts = computed(() => filterTagsPosts(tag as string))
-console.log(posts.value)
 useTitle(tag as string, { titleTemplate: `标签 - %s | ${META.title}` })
 </script>
 
@@ -30,7 +29,18 @@ useTitle(tag as string, { titleTemplate: `标签 - %s | ${META.title}` })
       </a>
     </div>
     <!-- 可以另外封装一个列表组件，不使用时间线组件 -->
-    <ArchivesList :list="posts" />
+    <div mt-5>
+      <!-- <ArchivesList :list="posts" /> -->
+      <NGrid :x-gap="12" :y-gap="8" :cols="2">
+        <NGridItem v-for="(item, index) in posts" :key="index">
+          <NCard hoverable :href="withBase(item.regularPath)" tag="a" :title="item.frontMatter.title">
+            <div line-clamp-2>
+              {{ item.frontMatter.description }}
+            </div>
+          </NCard>
+        </NGridItem>
+      </NGrid>
+    </div>
   </div>
 </template>
 

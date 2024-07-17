@@ -6,8 +6,9 @@ import giscusTalk from 'vitepress-plugin-comment-with-giscus'
 import { useData, useRoute } from 'vitepress'
 import 'virtual:uno.css'
 import './styles/vars.css'
+import { setup } from '@css-render/vue3-ssr'
 import { globalComponents } from './plugins'
-import Layout from './Layout.vue'
+import { NaiveUIProvider } from './plugins/naiveui'
 
 export default {
   ...DefaultTheme,
@@ -15,11 +16,15 @@ export default {
     const { app } = ctx
     vitepressNprogress(ctx)
     app.use(globalComponents)
+    if (import.meta.env.SSR) {
+      const { collect } = setup(app)
+      app.provide('css-render-collect', collect)
+    }
     // 暂时关闭复制水印
     // app.use(copyright)
     // app.component('NotFound', DefaultTheme.NotFound)
   },
-  Layout,
+  Layout: NaiveUIProvider,
   setup() {
     // Get frontmatter and route
     const { frontmatter } = useData()
