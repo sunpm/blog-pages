@@ -22,12 +22,6 @@ const list = ref<LinkItemData[]>([
     description: 'A ship in harbor is safe, but that is not what ships are built for.',
   },
   {
-    name: 'Simon He',
-    url: 'https://simonhe.me/',
-    icon: 'https://avatars.githubusercontent.com/u/57086651',
-    description: 'core member of unocss and vue vine, webview-use author',
-  },
-  {
     name: '_geekris1',
     url: 'https://www.thez.cc/',
     icon: 'https://raw.githubusercontent.com/geekris1/geekris1.me/master/public/icon.jpg',
