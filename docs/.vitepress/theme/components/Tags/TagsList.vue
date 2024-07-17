@@ -1,9 +1,10 @@
 <script lang="ts" setup>
 import { withBase } from 'vitepress'
 import { computed } from 'vue'
-import { useUrlSearchParams } from '@vueuse/core'
+import { useTitle, useUrlSearchParams } from '@vueuse/core'
 import { useTags } from '../../composables'
 import ArchivesList from '../Archives/ArchivesList.vue'
+import { META } from '../../../config/app.config'
 
 defineOptions({
   name: 'TagsList',
@@ -11,7 +12,9 @@ defineOptions({
 const { getTagsList, filterTagsPosts } = useTags()
 const { tag } = useUrlSearchParams()
 const data = computed(() => getTagsList())
-const posts = computed(() => filterTagsPosts(tag))
+const posts = computed(() => filterTagsPosts(tag as string))
+console.log(posts.value)
+useTitle(tag as string, { titleTemplate: `标签 - %s | ${META.title}` })
 </script>
 
 <template>
