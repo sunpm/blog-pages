@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { useData } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
-import { computed, nextTick, provide } from 'vue'
-import { NConfigProvider, darkTheme } from 'naive-ui'
+import { darkTheme } from 'naive-ui'
 
 const { isDark } = useData()
 const theme = computed(() => isDark.value ? darkTheme : null)

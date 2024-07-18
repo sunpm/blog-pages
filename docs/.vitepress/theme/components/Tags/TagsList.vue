@@ -2,7 +2,6 @@
 import { withBase } from 'vitepress'
 import { computed } from 'vue'
 import { useTitle, useUrlSearchParams } from '@vueuse/core'
-import { NCard, NGrid, NGridItem } from 'naive-ui'
 import { useTags } from '../../composables'
 import { META } from '../../../config/app.config'
 
