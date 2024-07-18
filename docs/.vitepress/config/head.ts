@@ -1,25 +1,14 @@
 import type { HeadConfig } from 'vitepress'
+import { busuanzi } from '../theme/plugins/busuanzi'
+import { baiduZhanZhang } from '../theme/plugins/baidu'
 
 export const head: HeadConfig[] = [
   ['link', { rel: 'icon', href: '/images/logo.png' }],
-  ['meta', { name: 'keywords', content: 'sunpm,isunpm,Sun .P.M,viteptess博客,网站导航,阿里云资源' }],
-  // 百度搜索站长验证
-  ['meta', { name: 'baidu-site-verification', content: 'code-a1SrlwvDIN' }],
+  ['meta', { name: 'description', content: '一站式前端、健身和英语内容网站，包括学习路线、知识体系，一站式阅读体验，跟随前沿技术，深度和广度学习，折腾 VitePress 。' }],
+  ['meta', { name: 'keywords', content: '资源导航,知识体系,Sun .P.M,vitepress博客,前端专栏,编程学习,面试手册,前端面试,健身和英语' }],
+  ...baiduZhanZhang,
   // 头条搜索站长验证
   ['meta', { name: 'bytedance-verification-code', content: 'yNTgJVlOI3MPXWXsd4jo' }],
-  ['script',
-    {},
-    // 百度搜索站长自动收录
-    `
-      var _hmt = _hmt || [];
-      (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?dd9a050364d57df3d5e04ed94ff378e9";
-        var s = document.getElementsByTagName("script")[0]; 
-        s.parentNode.insertBefore(hm, s);
-      })();
-    `,
-  ],
   ['script',
     {},
     // 头条搜索站长自动收录
@@ -33,4 +22,5 @@ export const head: HeadConfig[] = [
       })(window)
     `,
   ],
+  busuanzi,
 ]
