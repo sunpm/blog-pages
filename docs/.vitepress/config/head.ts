@@ -1,6 +1,5 @@
 import type { HeadConfig } from 'vitepress'
-import { busuanzi } from '../theme/plugins/busuanzi'
-import { baiduZhanZhang } from '../theme/plugins/baidu'
+import { baiduZhanZhang, busuanzi, googleAnalytics } from '../theme/plugins'
 
 export const head: HeadConfig[] = [
   ['link', { rel: 'icon', href: '/images/logo.png' }],
@@ -23,4 +22,5 @@ export const head: HeadConfig[] = [
     `,
   ],
   busuanzi,
+  ...googleAnalytics,
 ]
