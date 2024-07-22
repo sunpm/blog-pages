@@ -1,5 +1,7 @@
 import type { HeadConfig } from 'vitepress'
-import { baiduZhanZhang, busuanzi, googleAnalytics } from '../theme/plugins'
+import { baiduZhanZhang } from '../theme/plugins/baidu'
+import { busuanzi } from '../theme/plugins/busuanzi'
+import { googleAnalytics } from '../theme/plugins/google'
 
 export const head: HeadConfig[] = [
   ['link', { rel: 'icon', href: '/images/logo.png' }],

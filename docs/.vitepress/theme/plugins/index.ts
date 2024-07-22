@@ -1,5 +1,2 @@
 export * from './copyright'
 export * from './globalComponents'
-export * from './google'
-export * from './baidu'
-export * from './busuanzi'
