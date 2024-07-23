@@ -28,20 +28,20 @@ export default defineConfig({
     nav: [
       ...nav,
       {
-        text: `文库`,
+        text: '文库',
         items: [
           { text: '🫣 归档', link: '/archives' },
           { text: '🏷️ 标签', link: '/tags' },
         ],
       },
       {
-        text: `友链`,
+        text: '友链',
         items: [
           { text: '🤝 友情链接', link: '/link' },
         ],
       },
       {
-        text: `我的作品`,
+        text: '我的作品',
         items: [
           { text: 'vitesse-uniapp-vue3', link: `${userGithubLink}/vitesse-uniapp-vue3` },
         ],
@@ -76,7 +76,7 @@ export default defineConfig({
       }),
     ],
     ssr: {
-      noExternal: ['naive-ui', 'date-fns', 'vueuc']
+      noExternal: ['naive-ui', 'date-fns', 'vueuc'],
     },
     postRender(context) {
       const styleRegex = /<css-render-style>((.|\s)+)<\/css-render-style>/
@@ -94,8 +94,8 @@ export default defineConfig({
       if (!html) return
       const style = fileAndStyles[`/${html}`]
       if (style) {
-        return code.replace(/<\/head>/, style + '</head>')
+        return code.replace(/<\/head>/, `${style}</head>`)
       }
-    }
+    },
   },
 })
