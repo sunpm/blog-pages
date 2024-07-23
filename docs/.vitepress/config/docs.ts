@@ -1,10 +1,13 @@
-import { getJSUrl, getMiniProgramUrl, getViteUrl, getVueCliUrl } from './url'
+import { getCSSUrl, getMiniProgramUrl, getNPMUrl, getViteUrl, getVueCliUrl } from './url'
 
-export const javascript = [
-  { text: 'js 判断空对象', link: getJSUrl('/determine-empty-object') },
+export const css = [
+  { text: 'unocss常用设置', link: getCSSUrl('/unocss') },
 ]
 export const miniProgram = [
   { text: 'uniapp 分包', link: getMiniProgramUrl('/uniapp-subcontract') },
+]
+export const npm = [
+  { text: 'NPM 国内加速，修改镜像源', link: getNPMUrl('/NPM 国内加速，修改镜像源') },
 ]
 export const vite = [
   { text: 'Vite 设置别名', link: getViteUrl('/set-alias') },
@@ -15,7 +18,10 @@ export const vueCli = [
 
 export const basics = [
   {
-    text: 'Javascript', items: javascript,
+    text: 'css', items: css,
+  },
+  {
+    text: 'npm', items: npm,
   },
   {
     text: '小程序', items: miniProgram,

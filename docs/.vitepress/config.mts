@@ -28,21 +28,25 @@ export default defineConfig({
     nav: [
       ...nav,
       {
-        text: '🤝 友情链接',
-        link: '/link',
+        text: `文库`,
+        items: [
+          { text: '🫣 归档', link: '/archives' },
+          { text: '🏷️ 标签', link: '/tags' },
+        ],
       },
       {
-        text: '🫣 归档',
-        link: '/archives',
+        text: `友链`,
+        items: [
+          { text: '🤝 友情链接', link: '/link' },
+        ],
       },
       {
-        text: '🏷️ 标签',
-        link: '/tags',
+        text: `我的作品`,
+        items: [
+          { text: 'vitesse-uniapp-vue3', link: `${userGithubLink}/vitesse-uniapp-vue3` },
+        ],
       },
-      {
-        text: '👋 关于我',
-        link: '/about',
-      },
+      { text: '👋 关于我', link: '/about' },
     ],
 
     // 每个文章底下显示编辑按钮 https://vitepress.vuejs.org/guide/theme-edit-link.html

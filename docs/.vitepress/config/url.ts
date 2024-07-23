@@ -7,6 +7,12 @@ export const runLink = 'https://blog.fassr.com'
 export function getJSUrl(path: string) {
   return `/src/javascript${path}`
 }
+export function getCSSUrl(path: string) {
+  return `/src/css${path}`
+}
+export function getNPMUrl(path: string) {
+  return `/src/npm${path}`
+}
 // 小程序笔记路径
 export function getMiniProgramUrl(path: string) {
   return `/src/mini-program${path}`
