@@ -41,6 +41,10 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
 </script>
 
 <template>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND263VWW"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   <NConfigProvider :theme="theme">
     <!-- 本文总阅读量 <span id="busuanzi_value_page_pv">Loading</span> 次
     本文总访客量 <span id="busuanzi_value_page_uv">Loading</span> 人
