@@ -1,0 +1,3 @@
+[submodule "docs/src/unisave"]
+	path = docs/src/unisave
+	url = git@github.com:sunpm/unisave-docs-submodule.git
