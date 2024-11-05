@@ -9,6 +9,14 @@ import {
   transformerVariantGroup,
 } from 'unocss'
 
+export const defaultConfig = defineConfig({
+  details: false,
+  presets: [
+    presetUno(),
+    presetAttributify(),
+  ],
+})
+
 export default defineConfig({
   shortcuts: {
     'container-width': 'w-[1400px] m-xa',

@@ -9,12 +9,14 @@
   },
   "dependencies": {
     "@vueuse/core": "^10.11.0",
+    "cssbeautify": "^0.3.1",
     "vite-plugin-vitepress-auto-sidebar": "^1.6.1",
     "vitepress-plugin-comment-with-giscus": "^1.1.11"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.43.1",
     "@css-render/vue3-ssr": "^0.15.14",
+    "@types/cssbeautify": "^0.3.5",
     "@types/fs-extra": "^11.0.4",
     "@unocss/eslint-config": "^0.54.3",
     "dayjs": "^1.11.10",
@@ -24,6 +26,7 @@
     "gray-matter": "^4.0.3",
     "naive-ui": "^2.39.0",
     "postcss": "^8.4.38",
+    "shiki": "^1.22.2",
     "unocss": "^0.59.3",
     "unplugin-auto-import": "^0.18.0",
     "unplugin-vue-components": "^0.27.3",
