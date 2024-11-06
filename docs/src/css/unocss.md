@@ -7,8 +7,20 @@ tags:
   - css
   - unocss
 ---
+
+<script setup>
+import PlaygroundWithVariants from '../../.vitepress/theme/components/global/playground/PlaygroundWithVariants.vue'
+</script>
+
 # Unocss 常用属性
 
+<PlaygroundWithVariants
+    variant='sans'
+    :variants="['sans', 'serif', 'mono']"
+    prefix='font'
+    fixed='text-lg p-2 dark:text-white opacity-85'
+    html="The quick brown fox jumps over the lazy dog"
+/>
 ## Unocss超出显示省略号
 
 | **类**              | **属性值**                                                   |

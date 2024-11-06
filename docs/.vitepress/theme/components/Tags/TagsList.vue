@@ -2,11 +2,8 @@
 import { withBase } from 'vitepress'
 import { computed } from 'vue'
 import { useTitle, useUrlSearchParams } from '@vueuse/core'
-import { createGenerator } from '@unocss/core'
-import cssbeautify from 'cssbeautify'
-import { highlightCSS, useTags } from '../../composables'
+import { useTags } from '../../composables'
 import { META } from '../../../config/app.config'
-import { defaultConfig } from '../../../../../uno.config'
 
 defineOptions({
   name: 'TagsList',
@@ -16,29 +13,10 @@ const { tag } = useUrlSearchParams()
 const data = computed(() => getTagsList())
 const posts = computed(() => filterTagsPosts(tag as string))
 useTitle(tag as string, { titleTemplate: `标签 - %s | ${META.title}` })
-const uno = createGenerator({}, defaultConfig as any)
-const formattedCss = ref('')
-uno.generate('border-gray-500').then((result) => {
-  const cssCode = result.css
-  const parts = cssCode.split('/* layer: default */')
-  const defaultLayerCss = parts[1].trim()
-  formattedCss.value = cssbeautify(defaultLayerCss, {
-    indent: '  ',
-    autosemicolon: true,
-  })
-})
 </script>
 
 <template>
   <div m="t-4" class="vp-raw">
-    <div>
-      <div mb1 op30>
-        CSS
-      </div>
-      <div border="~ main" relative of-hidden p4>
-        <pre w-full of-auto v-html="highlightCSS(formattedCss)" />
-      </div>
-    </div>
     <div flex="center wrap" gap="4">
       <!-- hover 可以修改子元素颜色，添加背景 -->
       <a v-for="(item, index) in data" :key="index" :class="{ active: tag === item[0] }" :href="withBase(`?tag=${item[0]}`)" transition="all" class="hover:active" border="1 solid" p="2" leading-none flex="y-center" rounded="2">
