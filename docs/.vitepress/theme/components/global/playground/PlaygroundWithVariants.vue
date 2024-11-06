@@ -3,8 +3,8 @@ import { createGenerator } from '@unocss/core'
 import cssbeautify from 'cssbeautify'
 import presetUno from '@unocss/preset-uno'
 import { useVModels } from '@vueuse/core'
-import { highlightCSS } from '../../../composables'
 import SelectorVariants from './SelectorVariants.vue'
+import InlinePlayground from './InlinePlayground.vue'
 
 const props = withDefaults(defineProps<{
   variant?: string
@@ -44,6 +44,7 @@ const classes = computed(() => {
 })
 
 const formattedCss = ref('')
+const previewStyle = ref({})
 async function generateCss() {
   const uno = createGenerator({}, {
     details: false,
@@ -55,10 +56,36 @@ async function generateCss() {
   const parts = css.split('/* layer: default */')
   if (parts.length < 2) return
   const defaultLayerCss = parts[1].trim()
+  previewStyle.value = extractCSSProperties(defaultLayerCss)
   formattedCss.value = cssbeautify(defaultLayerCss, {
     indent: '  ',
     autosemicolon: true,
   })
+}
+function extractCSSProperties(cssRule) {
+  // 使用正则表达式匹配花括号内的内容
+  const match = cssRule.match(/{([^}]*)}/)
+
+  if (!match) {
+    return null // 如果没有匹配到，返回null
+  }
+
+  // 提取花括号内的内容
+  const content = match[1].trim()
+
+  // 将内容分割成键值对
+  const pairs = content.split(';').filter(pair => pair.trim() !== '')
+
+  // 创建一个对象来存储属性
+  const properties = {}
+
+  // 遍历每个键值对并添加到对象中
+  pairs.forEach((pair) => {
+    const [key, value] = pair.split(':').map(item => item.trim())
+    properties[key] = value
+  })
+
+  return properties
 }
 
 // 在服务器端和客户端都执行
@@ -82,9 +109,16 @@ watch(classes, generateCss)
       "
     />
     <div class="mt-4" />
-    <div border="~ main" relative of-hidden p4>
-      <pre w-full of-auto v-html="highlightCSS(formattedCss)" />
-    </div>
+    <InlinePlayground
+      :input="classes"
+      :fixed="fixed"
+      :nested="nested"
+      :appended="appended"
+      :html="html"
+      :show-preview="showPreview"
+      :formatted-css="formattedCss"
+      :preview-style="previewStyle"
+    />
   </div>
 </template>
 

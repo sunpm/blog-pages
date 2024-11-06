@@ -30,6 +30,9 @@ importers:
       '@css-render/vue3-ssr':
         specifier: ^0.15.14
         version: 0.15.14(vue@3.5.12(typescript@5.6.3))
+      '@iconify-json/carbon':
+        specifier: ^1.2.4
+        version: 1.2.4
       '@types/cssbeautify':
         specifier: ^0.3.5
         version: 0.3.5
@@ -577,6 +580,9 @@ packages:
   '@humanwhocodes/object-schema@2.0.3':
     resolution: {integrity: sha512-93zYdMES/c1D69yZiKDBj0V24vqNzB/koF26KPaagAfd3P/4gUlh3Dys5ogAK+Exi9QyzlD8x/08Zt7wIKcDcA==}
     deprecated: Use @eslint/object-schema instead
+
+  '@iconify-json/carbon@1.2.4':
+    resolution: {integrity: sha512-DhW2jjMVGwV0DLHc0cmDYohdtGxMra8UuwgjHrryPy+rQX4gXhJwCBBVP2h2UG/92AoRCTn7zUJve4WvY5MLYg==}
 
   '@iconify-json/simple-icons@1.2.11':
     resolution: {integrity: sha512-AHCGDtBRqP+JzAbBzgO8uN/08CXxEmuaC6lQQZ3b5burKhRU12AJnJczwbUw2K5Mb/U85EpSUNhYMG3F28b8NA==}
@@ -3070,6 +3076,10 @@ snapshots:
   '@humanwhocodes/module-importer@1.0.1': {}
 
   '@humanwhocodes/object-schema@2.0.3': {}
+
+  '@iconify-json/carbon@1.2.4':
+    dependencies:
+      '@iconify/types': 2.0.0
 
   '@iconify-json/simple-icons@1.2.11':
     dependencies:

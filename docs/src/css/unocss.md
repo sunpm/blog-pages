@@ -14,13 +14,6 @@ import PlaygroundWithVariants from '../../.vitepress/theme/components/global/pla
 
 # Unocss 常用属性
 
-<PlaygroundWithVariants
-    variant='sans'
-    :variants="['sans', 'serif', 'mono']"
-    prefix='font'
-    fixed='text-lg p-2 dark:text-white opacity-85'
-    html="The quick brown fox jumps over the lazy dog"
-/>
 ## Unocss超出显示省略号
 
 | **类**              | **属性值**                                                   |
@@ -29,6 +22,14 @@ import PlaygroundWithVariants from '../../.vitepress/theme/components/global/pla
 | `line-clamp-none`   | -webkit-line-clamp: unset;                                   |
 
 ## 行高 line-height
+
+<PlaygroundWithVariants
+    variant='normal'
+    :variants="['none', 'tight', 'snug', 'normal', 'relaxed', 'loose', '0', '1', '2', '3', '4', '5', '6']"
+    prefix='leading'
+    fixed='p-2 dark:text-white opacity-85'
+    html="The quick brown fox jumps over the lazy dog"
+/>
 
 | **类**            | **属性值**                          |
 |------------------|----------------------------------|
