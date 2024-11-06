@@ -2,9 +2,7 @@
 title: vendor.js 过大的处理方式
 description: 小程序工具提示`vendor.js`过大，已经跳过es6向es5转换。这个转换问题本身不用理会，因为`vendor.js`已经是es5的了。
 date: 2020-02-01 18:00:30
-tags:
-  - 小程序
-  - uniapp
+tags: ['小程序', 'uniapp']
 ---
 
 # vendor.js 过大的处理方式

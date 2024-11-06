@@ -1,23 +1,21 @@
-@import url("https://cdn.bootcdn.net/ajax/libs/lxgw-wenkai-webfont/1.7.0/style.min.css");
+@import url('https://cdn.bootcdn.net/ajax/libs/lxgw-wenkai-webfont/1.7.0/style.min.css');
 
 /**
  * Typography
  * -------------------------------------------------------------------------- */
 :root {
-    --vp-font-family-base: "LXGW WenKai", "Inter var experimental",
-    "Inter var", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    --vp-font-family-mono: "LXGW WenKai Mono", ui-monospace, SFMono-Regular,
-    "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
-    monospace;
+  --vp-font-family-base: 'LXGW WenKai', 'Inter var experimental', 'Inter var', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --vp-font-family-mono: 'LXGW WenKai Mono', ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas,
+    'Liberation Mono', 'Courier New', monospace;
 
-    --vp-c-text-1: rgba(0,0,0);
-    --vp-c-text-2: rgba(0,0,0, 0.78);
-    --vp-c-text-3: rgba(0,0,0, 0.56);
+  --vp-c-text-1: rgba(0, 0, 0);
+  --vp-c-text-2: rgba(0, 0, 0, 0.78);
+  --vp-c-text-3: rgba(0, 0, 0, 0.56);
 }
 
 .dark {
-    --vp-c-text-1: rgba(255, 255, 245, 0.86);
-    --vp-c-text-2: rgba(235, 235, 245, 0.7);
-    --vp-c-text-3: rgba(235, 235, 245, 0.48);
+  --vp-c-text-1: rgba(255, 255, 245, 0.86);
+  --vp-c-text-2: rgba(235, 235, 245, 0.7);
+  --vp-c-text-3: rgba(235, 235, 245, 0.48);
 }
