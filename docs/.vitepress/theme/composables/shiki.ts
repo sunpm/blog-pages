@@ -2,16 +2,16 @@ import type { HighlighterCore } from 'shiki/core'
 import { createHighlighterCore } from 'shiki/core'
 import langCss from 'shiki/langs/css.mjs'
 import langJs from 'shiki/langs/javascript.mjs'
-import vitesseDark from 'shiki/themes/vitesse-dark.mjs'
-import vitesseLight from 'shiki/themes/vitesse-light.mjs'
+import githubDark from 'shiki/themes/github-dark.mjs'
+import githubLight from 'shiki/themes/github-light.mjs'
 import { computedAsync } from '@vueuse/core'
 
 export const shiki = computedAsync<HighlighterCore>(async () => {
   return await createHighlighterCore({
     loadWasm: () => import('shiki/wasm'),
     themes: [
-      vitesseDark,
-      vitesseLight,
+      githubDark,
+      githubLight,
     ],
     langs: [
       langCss,
@@ -27,8 +27,8 @@ export function highlight(code: string, lang: 'css' | 'javascript') {
     lang,
     defaultColor: false,
     themes: {
-      dark: 'vitesse-dark',
-      light: 'vitesse-light',
+      dark: 'github-dark',
+      light: 'github-light',
     },
   })
 }
