@@ -2,6 +2,7 @@
 import { useData } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import { darkTheme } from 'naive-ui'
+import { Count } from './components/index'
 
 const { isDark } = useData()
 const theme = computed(() => isDark.value ? darkTheme : null)
@@ -46,11 +47,11 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <NConfigProvider :theme="theme">
-    <!-- 本文总阅读量 <span id="busuanzi_value_page_pv">Loading</span> 次
-    本文总访客量 <span id="busuanzi_value_page_uv">Loading</span> 人
-    本站总访问量 <span id="busuanzi_value_site_pv">Loading</span> 次
-    本站总访客数 <span id="busuanzi_value_site_uv">Loading</span> 人 -->
-    <DefaultTheme.Layout />
+    <DefaultTheme.Layout>
+      <template #doc-after>
+        <Count />
+      </template>
+    </DefaultTheme.Layout>
   </NConfigProvider>
 </template>
 
