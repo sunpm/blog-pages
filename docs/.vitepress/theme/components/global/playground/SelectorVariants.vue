@@ -35,7 +35,7 @@ function has(str: string) {
 }
 .item {
   height: max-content;
-  @apply px-2 py-0.5 inline-block rounded font-mono
+  @apply px-2 py-0.5 inline-block rounded
   border-1 border-solid border-opacity-50 dark:border-opacity-50
   text-sm cursor-pointer select-none;
 }
