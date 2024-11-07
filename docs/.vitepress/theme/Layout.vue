@@ -48,7 +48,7 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
   <!-- End Google Tag Manager (noscript) -->
   <NConfigProvider :theme="theme">
     <DefaultTheme.Layout>
-      <template #doc-after>
+      <template #doc-footer-before>
         <Count />
       </template>
     </DefaultTheme.Layout>
