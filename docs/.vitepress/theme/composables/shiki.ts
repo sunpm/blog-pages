@@ -1,17 +1,20 @@
 import type { HighlighterCore } from 'shiki/core'
+import { createOnigurumaEngine } from 'shiki/engine/oniguruma'
 import { createHighlighterCore } from 'shiki/core'
 import langCss from 'shiki/langs/css.mjs'
 import langJs from 'shiki/langs/javascript.mjs'
-import vitesseDark from 'shiki/themes/vitesse-dark.mjs'
-import vitesseLight from 'shiki/themes/vitesse-light.mjs'
+import githubDark from 'shiki/themes/github-dark.mjs'
+import githubLight from 'shiki/themes/github-light.mjs'
 import { computedAsync } from '@vueuse/core'
 
 export const shiki = computedAsync<HighlighterCore>(async () => {
   return await createHighlighterCore({
-    loadWasm: () => import('shiki/wasm'),
+    // https://shiki.tmrs.site/guide/future#%E9%87%8D%E8%A6%81%E7%9A%84%E5%BA%9F%E5%BC%83%E9%A1%B9
+    // loadWasm: () => import('shiki/wasm'),
+    engine: createOnigurumaEngine(() => import('shiki/wasm')),
     themes: [
-      vitesseDark,
-      vitesseLight,
+      githubDark,
+      githubLight,
     ],
     langs: [
       langCss,
@@ -27,8 +30,8 @@ export function highlight(code: string, lang: 'css' | 'javascript') {
     lang,
     defaultColor: false,
     themes: {
-      dark: 'vitesse-dark',
-      light: 'vitesse-light',
+      dark: 'github-dark',
+      light: 'github-light',
     },
   })
 }

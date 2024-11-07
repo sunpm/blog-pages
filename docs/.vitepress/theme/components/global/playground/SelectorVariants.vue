@@ -40,6 +40,8 @@ function has(str: string) {
   text-sm cursor-pointer select-none;
 }
 .item.active {
-  @apply border-sky-500 text-sky-500;
+  @apply border-[var(--vp-c-brand-1)] text-[var(--vp-c-brand-1)];
 }
 </style>
+  <!-- @apply border-sky-500 text-sky-500; -->
+  <!-- @apply border-[color:var(&#45;&#45;vp-c-brand-1)] text-[color:var(&#45;&#45;vp-c-brand-1)]; -->
