@@ -1,11 +1,8 @@
 ---
 title: Unocss 常用属性
-description: 记录 Unocss 常用属性，方便查阅。
+description: 记录 Unocss 常用属性，方便查阅，可在线预览。
 date: 2024-02-22 18:00:30
-tags:
-  - 原子化
-  - css
-  - unocss
+tags: ['原子化', 'css', 'unocss']
 ---
 
 <script setup>
@@ -37,4 +34,4 @@ import PlaygroundWithVariants from '../../.vitepress/theme/components/global/pla
 | `leading-1`      | line-height: 0.25rem;            |
 | `leading-none`   | line-height: 1;                  |
 
-欢迎在下方留言或评论补充，也可提交 pr 或 issue
+未收录的欢迎在下方留言或评论补充，也可提交 pr 或 issue，在线秒回哦！！！
