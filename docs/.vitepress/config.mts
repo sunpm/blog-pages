@@ -62,6 +62,9 @@ export default defineConfig({
     socialLinks,
     search,
   },
+  outline: {
+    level: [1, 3],
+  },
   sitemap: {
     hostname: runLink,
   },
