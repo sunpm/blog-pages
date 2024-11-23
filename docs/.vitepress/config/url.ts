@@ -24,3 +24,6 @@ export function getViteUrl(path: string) {
 export function getVueCliUrl(path: string) {
   return `/src/vue-cli${path}`
 }
+export function getUnisaveDocsUrl(path: string) {
+  return `/src/unisave-docs${path}`
+}

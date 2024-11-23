@@ -23,6 +23,10 @@ export default defineConfig({
       dark: '/images/logo.png',
     },
     posts: await getPosts(),
+    outline: {
+      level: [2, 3],
+      label: '目录',
+    },
     // https://vitepress.dev/reference/default-theme-config
     // 顶部右侧导航
     nav: [
@@ -61,9 +65,6 @@ export default defineConfig({
     },
     socialLinks,
     search,
-  },
-  outline: {
-    level: [1, 3],
   },
   sitemap: {
     hostname: runLink,
