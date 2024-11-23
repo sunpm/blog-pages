@@ -22,6 +22,7 @@ const props = withDefaults(defineProps<{
   prefix: '',
   fixed: '',
   appended: '',
+  html: 'The quick brown fox jumps over the lazy dog',
   nested: false,
   showPreview: true,
 })
