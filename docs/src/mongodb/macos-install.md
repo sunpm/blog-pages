@@ -11,7 +11,7 @@ brew install mongodb-community@5.0 # 安装
 
 ## 安装成功
 
-![image-20220829104541813](https://upic.fassr.com/uPic/2022-08-29/10:45:42-40XhzC_image-20220829104541813.png)
+![image-20220829104541813](https://media.sunpm.me/uPic/2022-08-29/10:45:42-40XhzC_image-20220829104541813.png)
 
 
 
@@ -31,7 +31,7 @@ echo 'export PATH="/usr/local/opt/mongodb-community@5.0/bin:$PATH"' >> ~/.zshrc
 brew services start mongodb-community@5.0
 ```
 
-![image-20220829115027807](https://upic.fassr.com/uPic/2022-08-29/11:50:28-XDoH75_image-20220829115027807.png)
+![image-20220829115027807](https://media.sunpm.me/uPic/2022-08-29/11:50:28-XDoH75_image-20220829115027807.png)
 
 ## 停止服务
 
@@ -39,7 +39,7 @@ brew services start mongodb-community@5.0
 brew services stop mongodb-community@5.0
 ```
 
-![image-20220829115124999](https://upic.fassr.com/uPic/2022-08-29/11:51:25-h73cgq_image-20220829115124999.png)
+![image-20220829115124999](https://media.sunpm.me/uPic/2022-08-29/11:51:25-h73cgq_image-20220829115124999.png)
 
 ## 系统登陆立即启动mongodb
 
@@ -55,7 +55,7 @@ brew services start mongodb/brew/mongodb-community@5.0
 mongo
 ```
 
-![image-20220829123433576](https://upic.fassr.com/uPic/2022-08-29/12:34:33-jUYvT7_image-20220829123433576.png)
+![image-20220829123433576](https://media.sunpm.me/uPic/2022-08-29/12:34:33-jUYvT7_image-20220829123433576.png)
 
 ## 报错信息
 
@@ -75,7 +75,7 @@ CI systems (which should instead be fixed to not use shallow clones). Sorry for
 the inconvenience!
 ```
 
-![image-20220829103911383](https://upic.fassr.com/uPic/2022-08-29/10:39:12-Ol3EI9_image-20220829103911383.png)
+![image-20220829103911383](https://media.sunpm.me/uPic/2022-08-29/10:39:12-Ol3EI9_image-20220829103911383.png)
 
 
 
@@ -98,7 +98,7 @@ exiting with code 1
 
 
 
-![image-20220829120347600](https://upic.fassr.com/uPic/2022-08-29/12:03:47-HJiTr9_image-20220829120347600.png)
+![image-20220829120347600](https://media.sunpm.me/uPic/2022-08-29/12:03:47-HJiTr9_image-20220829120347600.png)
 
 在你的主目录中创建一个 data/db
 

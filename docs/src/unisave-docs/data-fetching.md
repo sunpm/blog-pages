@@ -73,13 +73,13 @@ request<
     Record<string, any> // 对应传参中 data 类型 --> 请求数据类型
 >()
 ```
-![image-20240816145230571](https://upic.fassr.com/uPic/2024-08-16/14:52:32-i9WmGZ_image-20240816145230571.png)
+![image-20240816145230571](https://media.sunpm.me/uPic/2024-08-16/14:52:32-i9WmGZ_image-20240816145230571.png)
 
-![image-20240816145326013](https://upic.fassr.com/uPic/2024-08-16/14:53:27-T02Q9y_image-20240816145326013.png)
+![image-20240816145326013](https://media.sunpm.me/uPic/2024-08-16/14:53:27-T02Q9y_image-20240816145326013.png)
 
 请求响应类型：
 
-![image-20240816142652093](https://upic.fassr.com/uPic/2024-08-16/14:26:54-0YBOc4_image-20240816142652093.png)
+![image-20240816142652093](https://media.sunpm.me/uPic/2024-08-16/14:26:54-0YBOc4_image-20240816142652093.png)
 
 ## 请求拦截器
 [查看 uni-network 文档](https://uni-network.netlify.app/advanced/interceptors.html)

@@ -54,4 +54,4 @@ import '@toast-ui/editor/dist/i18n/zh-cn'
 ```
 
 翻看源码发现，语言还是挺多的
-![11:58:24-89MyvS_image](https://upic.fassr.com/uPic/2022-08-19/11:58:24-89MyvS_image.png)
+![11:58:24-89MyvS_image](https://media.sunpm.me/uPic/2022-08-19/11:58:24-89MyvS_image.png)

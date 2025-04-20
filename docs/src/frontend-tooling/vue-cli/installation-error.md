@@ -27,7 +27,7 @@ npm ERR! A complete log of this run can be found in:
 npm ERR!     /Users/pmun/.npm/_logs/2023-09-14T02_29_57_147Z-debug-0.log
 ```
 
-![image-20230914103440044](https://upic.fassr.com/uPic/2023-09-14/10:34:40-HWAwp8_image-20230914103440044.png)
+![image-20230914103440044](https://media.sunpm.me/uPic/2023-09-14/10:34:40-HWAwp8_image-20230914103440044.png)
 
 
 

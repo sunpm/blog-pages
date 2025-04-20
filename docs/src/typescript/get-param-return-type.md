@@ -50,7 +50,7 @@ const userResult = login(userInfo)
 const userInfo: Parameters<typeof login> = {}
 ```
 
-![image-20240422205702604](https://upic.fassr.com/uPic/2024-04-22/20:57:02-LM38nZ_image-20240422205702604.png)
+![image-20240422205702604](https://media.sunpm.me/uPic/2024-04-22/20:57:02-LM38nZ_image-20240422205702604.png)
 
 从上图可以看出，`Parameters` 返回的是所有参数类型的元组，我们只需要第一个参数的类型，所以可以通过添加索引来获取第一个类型
 
