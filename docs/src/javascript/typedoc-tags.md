@@ -1,11 +1,11 @@
 ---
-title: JSDoc 标签的区别和建议
-description: JSDoc 标签的在 TSDoc 中的区别和建议
+title: TypeDoc 标签的区别和建议
+description: TypeDoc 标签的区别和建议
 date: 2025-04-23 09:42:27
-tags: ['jsDoc']
+tags: ['JsDoc', 'TypeDoc']
 ---
 
-# JSDoc 标签的区别和建议
+# TypeDoc 标签的区别和建议
 
 >  例如现在有个 date 相关的工具方法集合
 
