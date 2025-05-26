@@ -34,6 +34,4 @@ export default defineConfig({
 
 然后可以在webstorm上面使用别名和代码提示了
 
-
-
 ![image](https://media.sunpm.me/uPic/2022-08-17/09:56:10-xBiVpr_image.png)

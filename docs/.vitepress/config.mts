@@ -1,6 +1,5 @@
 import { defineConfig } from 'vitepress'
 import Unocss from 'unocss/vite'
-import AutoSidebar from 'vite-plugin-vitepress-auto-sidebar'
 import { githubLink, runLink, userGithubLink } from './config/url'
 import { search } from './config/search'
 import { socialLinks } from './config/social'
@@ -73,11 +72,6 @@ export default defineConfig({
   vite: {
     plugins: [
       Unocss(),
-      AutoSidebar({
-        path: '/docs',
-        titleFromFile: true,
-        ignoreList: ['components'],
-      }),
     ],
     ssr: {
       noExternal: ['naive-ui', 'date-fns', 'vueuc'],

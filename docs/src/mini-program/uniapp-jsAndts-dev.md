@@ -17,11 +17,7 @@ tags:
 
 > 重点：作用是.js和.ts可以互相引入并使用内部资源，例如可以将vuex使用ts编写并在vue中使用（这个很重要了：不是在vue模板中添加lang=ts去使用ts语法）
 
-
-
 ## 添加依赖
-
-
 
 根据您的包管理器去安装相应的ts依赖插件
 
@@ -33,11 +29,7 @@ yarn add typescript @vue/cli-plugin-typescript @babel/plugin-syntax-typescript@^
 npm install typescript @vue/cli-plugin-typescript @babel/plugin-syntax-typescript@^7.2.0 -D
 ```
 
-
-
 ## 配置tsconfig.json
-
-
 
 这个可以按照您以往的ts习惯去配置，我只是从uniapp官方的ts模板中copy下来直接使用
 
@@ -52,7 +44,7 @@ npm install typescript @vue/cli-plugin-typescript @babel/plugin-syntax-typescrip
     "moduleResolution": "node",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "experimentalDecorators":true,
+    "experimentalDecorators": true,
     "sourceMap": true,
     "skipLibCheck": true,
     "baseUrl": ".",

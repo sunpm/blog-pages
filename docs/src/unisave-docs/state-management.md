@@ -3,6 +3,7 @@
 得益于组合式方法（Composition API），管理状态非常简单。
 
 模板预设了 [Pinia](https://github.com/vuejs/pinia) 和 [`pinia-plugin-persist-uni`](https://github.com/Allen-1998/pinia-plugin-persist-uni)
+
 - [Pinia](https://github.com/vuejs/pinia) - 直接的, 类型安全的, 使用 Composition API 的轻便灵活的 Vue 状态管理
 - [`pinia-plugin-persist-uni`](https://github.com/Allen-1998/pinia-plugin-persist-uni) - pinia 在 uniapp 中数据持久化插件
 
@@ -33,13 +34,12 @@ export const useCountStore = defineStore('count', () => {
     detached: true, // 设置订阅与组件分离
   },
 })
-
 ```
 
 ```vue [src/components/Counter.vue]
 <script setup lang="ts">
-  const { inc, dec } = useCountStore()
-  const { count } = storeToRefs(useCountStore())
+const { inc, dec } = useCountStore()
+const { count } = storeToRefs(useCountStore())
 </script>
 
 <template>
@@ -55,9 +55,11 @@ export const useCountStore = defineStore('count', () => {
   </div>
 </template>
 ```
+
 :::
 
 ::: warning
 报错：`Uncaught SyntaxError: The requested module '/node_modules/vue-demi/lib/index.mjs?v=701bef9f' does not provide an export named 'hasInjectionContext'`
+
 > pinia v2.1.X 版本要求 vue 3.3 或者 vue-demi latest ，如果 uniapp 的 vue 版本是 ^3.2.45，通过 pinia 降级到 2.0.X 可以运行和使用。
-:::
+> :::

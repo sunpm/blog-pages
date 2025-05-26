@@ -40,9 +40,9 @@
       <image inline-block h-10 w-10 src="/static/logo.png" />
     </view>
     <view
-        text="3xl gray4"
-        m="x-4 y-auto"
-        i-carbon-add transform transition-all-500 hover:rotate-135
+      text="3xl gray4"
+      m="x-4 y-auto"
+      i-carbon-add transform transition-all-500 hover:rotate-135
     />
     <view flex flex-col>
       <span i-carbon-campsite h-10 w-10 />
@@ -105,7 +105,7 @@
 ```vue [src/layouts/default.vue]
 <template>
   <main
-      class="px-10 py-20 text-center"
+    class="px-10 py-20 text-center"
   >
     <slot />
     <Footer />
@@ -138,9 +138,11 @@
   </view>
 </template>
 ```
+
 :::
 
 在页面文件内设置 `route` 代码块可以指定自定义布局和设置 pages.json 相关配置。具体属性可[查看文档](https://github.com/uni-helper/vite-plugin-uni-pages#sfc-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9D%97%E7%94%A8%E4%BA%8E%E8%B7%AF%E7%94%B1%E6%95%B0%E6%8D%AE)。
+
 ```vue [src/pages/index/index.vue]
 <route lang="json" type="home">
 {

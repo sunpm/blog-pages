@@ -38,11 +38,12 @@ this.editor.eventEmitter.removeEventHandler('addImageBlobHook') // 删除默认�
 // 添加自定义监听事件
 this.editor.eventEmitter.listen('addImageBlobHook', (blob, callback) => {
   // 此处填写自己的上传逻辑，url为上传后的图片地址
-  this.upload(blob, url => {
+  this.upload(blob, (url) => {
     callback(url)
   })
 })
 ```
+
 ## 国际化
 
 `@toast-ui/editor`默认是英文，就算在`language`字段设置为`'zh-CN'`也还是英文

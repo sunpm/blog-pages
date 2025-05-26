@@ -1,9 +1,15 @@
+import { resolve } from 'node:path'
 import AutoImport from 'unplugin-auto-import/vite'
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 import Components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
+  resolve: {
+    alias: [
+      { find: '~/', replacement: `${resolve(__dirname, 'src')}/` },
+    ],
+  },
   ssr: {
     noExternal: ['vitepress-plugin-nprogress'],
   },

@@ -6,7 +6,7 @@ head:
   - - meta
     - name: keywords
       content: super duper SEO
-      
+
 editLink: false
 lastUpdated: false
 ---

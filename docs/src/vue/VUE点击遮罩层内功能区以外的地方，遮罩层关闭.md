@@ -2,10 +2,8 @@
 
 ```html
 <div v-show="visible" @touchmove.stop.prevent @mousewheel.prevent class="login-mark" @click="closeMark($event)">
-    <div class="login-box" ref="loginBox">
-      
-    </div>
-  </div>
+  <div class="login-box" ref="loginBox"></div>
+</div>
 ```
 
 ```js
@@ -30,7 +28,7 @@ data() {
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: rgba(0,0,0,.3);
+  background-color: rgba(0, 0, 0, 0.3);
   z-index: 999;
   display: flex;
   justify-content: center;
@@ -42,4 +40,3 @@ data() {
   }
 }
 ```
-

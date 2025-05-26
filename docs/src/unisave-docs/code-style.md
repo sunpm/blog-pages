@@ -9,6 +9,7 @@
 [ESLint](https://eslint.org/) 是一个用于识别和报告 JavaScript/TypeScript 代码中发现的模式的工具，目标是使代码更加一致并避免错误。配置文件位于项目根目录的 `eslint.config.js`。
 
 ESLint 可以：
+
 - 自动检查代码中的语法错误
 - 检查代码风格是否符合规范
 - 修复简单的代码问题
@@ -52,6 +53,7 @@ module.exports = uni(
 ```
 
 主要特点：
+
 - 基于 [@uni-helper/eslint-config](https://github.com/uni-helper/eslint-config) 配置，专为 uni-app 项目定制
 - 集成了 [UnoCSS](https://github.com/unocss/unocss) 的 ESLint 插件，支持 UnoCSS 语法检查
 - 自定义规则：
@@ -73,6 +75,7 @@ module.exports = uni(
 - [stylelint-scss](https://github.com/stylelint-scss/stylelint-scss)：为 Stylelint 提供 SCSS 特定语法的支持
 
 Stylelint 可以：
+
 - 检查 CSS/SCSS/Less 语法错误
 - 确保样式代码遵循设定的规范
 - 自动修复样式问题
@@ -91,10 +94,10 @@ Stylelint 可以：
 ```
 
 simple-git-hooks 的主要优势：
+
 - 轻量级，无依赖
 - 比 husky 更快的执行速度
 - 简单直观的配置方式
-
 
 ## Lint Staged 配置
 
@@ -110,12 +113,14 @@ simple-git-hooks 的主要优势：
 ```
 
 这意味着：
+
 - 在提交代码时，只会对当前更改的文件进行检查
 - 针对 JavaScript/TypeScript/Vue 文件会运行 ESLint 并尝试自动修复问题
 - 对于 CSS/SCSS 文件和 Vue 文件中的样式部分会运行 Stylelint 并尝试自动修复
 - 使用 `--cache` 参数加速后续的检查过程
 
 lint-staged 的主要优势：
+
 - 只检查已修改的文件，大大节省时间
 - 与 Git workflow 无缝集成
 - 支持多种文件类型和多个 linters

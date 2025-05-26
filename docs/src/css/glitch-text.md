@@ -9,7 +9,6 @@ tags: ['特效', 'css']
 import { GlitchText } from './components'
 </script>
 
-
 # 出故障的文字
 
 故障文本看起来总是很酷。如果你想为你的网站添加小故障效果，请参考它。
@@ -17,7 +16,7 @@ import { GlitchText } from './components'
 <GlitchText />
 
 ```html
-<div class="glitch" data-text="SUNPM">SUNPM</div> 
+<div class="glitch" data-text="SUNPM">SUNPM</div>
 ```
 
 ```css
@@ -190,4 +189,3 @@ body {
   animation: noise-anim-2 3s infinite linear alternate-reverse;
 }
 ```
-

@@ -9,6 +9,7 @@
 本模版已为其他预设启用 [attributify 模式](https://unocss.dev/presets/attributify#attributify-mode)。
 
 ### 属性前缀
+
 由于第三方组件库组件样式和 unocss attributify 模式冲突，已在配置中为 attributify 模式添加 `us-` 前缀。
 
 ```html
@@ -18,6 +19,7 @@
 ```
 
 可以根据自己喜好设置其他前缀
+
 ```ts
 // uno.config.ts
 presetUni({
@@ -29,6 +31,7 @@ presetUni({
 ```
 
 以下多种写法等价
+
 ```html
 <button class="border border-red">Button</button>
 
@@ -38,19 +41,20 @@ presetUni({
 ```
 
 ### 多平台条件编译
+
 模板内置了 [@uni-helper/unocss-preset-uni](https://github.com/uni-helper/unocss-preset-uni)，它在底层使用 [unocss-applet](https://github.com/unocss-applet/unocss-applet) 来兼容不同平台，并提供了按平台编写样式的能力。
 
 ```html
 <!-- 只在 H5 编译时生成 mx-auto 类 -->
-<view class='uni-h5:mx-auto'></view>
+<view class="uni-h5:mx-auto"></view>
 <!-- 只在 APP 编译时生成 mx-auto 类 -->
-<view class='uni-app:mx-auto'></view>
+<view class="uni-app:mx-auto"></view>
 <!-- 只在小程序编译时生成 mx-auto 类 -->
-<view class='uni-mp:mx-auto'></view>
+<view class="uni-mp:mx-auto"></view>
 <!-- 只在微信小程序编译时生成 mx-auto 类 -->
-<view class='uni-weixin:mx-auto'></view>
+<view class="uni-weixin:mx-auto"></view>
 <!-- 只在支付宝小程序编译时生成 mx-auto 类 -->
-<view class='uni-mp-alipay:mx-auto'></view>
+<view class="uni-mp-alipay:mx-auto"></view>
 ```
 
 ## CSS 预处理器
@@ -80,15 +84,15 @@ presetUni({
 ### 多端支持情况
 
 | UI 框架      | [uv-ui](https://www.uvui.cn/) | [uviewui](https://www.uviewui.com/) | [wot-ui](https://wot-design-uni.netlify.app/) | [TuniaoUI](https://vue3.tuniaokj.com/) | [nutui](https://nutui-uniapp.netlify.app/) |
-| :----------- | :---- | :------ | :----- | :------- | ----- |
-| h5           | ✅     | ✅       | ✅      | ✅        | ✅     |
-| app(ios)     | ✅     | ✅       | ✅      | ✅        | ❓     |
-| app(android) | ✅     | ✅       | ✅      | ✅        | ❓     |
-| 微信小程序   | ✅     | ✅       | ✅      | ✅        | ✅     |
-| 支付宝小程序 | ✅     | ✅       | ✅      | ✅        | ❓     |
-| QQ 小程序    | ✅     | ✅       | ❌      | ❌        | ❌     |
-| 百度小程序   | ✅     | ✅       | ❌      | ❌        | ❌     |
-| 头条小程序   | ✅     | ✅       | ❌      | ❌        | ❌     |
+| :----------- | :---------------------------- | :---------------------------------- | :-------------------------------------------- | :------------------------------------- | ------------------------------------------ |
+| h5           | ✅                            | ✅                                  | ✅                                            | ✅                                     | ✅                                         |
+| app(ios)     | ✅                            | ✅                                  | ✅                                            | ✅                                     | ❓                                         |
+| app(android) | ✅                            | ✅                                  | ✅                                            | ✅                                     | ❓                                         |
+| 微信小程序   | ✅                            | ✅                                  | ✅                                            | ✅                                     | ✅                                         |
+| 支付宝小程序 | ✅                            | ✅                                  | ✅                                            | ✅                                     | ❓                                         |
+| QQ 小程序    | ✅                            | ✅                                  | ❌                                            | ❌                                     | ❌                                         |
+| 百度小程序   | ✅                            | ✅                                  | ❌                                            | ❌                                     | ❌                                         |
+| 头条小程序   | ✅                            | ✅                                  | ❌                                            | ❌                                     | ❌                                         |
 
 在兼容性方面只剩下 `uv-ui` 和 `uviewui`，都是基于 `uviewui` 生态系统的组件库。尽管这两个库在功能和设计上表现出了较高的实用性，但在类型支持方面却显得不足，因为它们缺乏原生的类型定义文件。通常，这类类型支持是由第三方包 [`@ttou/uview-typings`](https://www.npmjs.com/package/@ttou/uview-typings) 提供的，但令人遗憾的是，该包已被其维护者标记为废弃，且最后一次更新已有一年之久(**截稿时间：2024 年 8 月 16 日**)。鉴于此，继续依赖 `@ttou/uview-typings` 显然存在风险，因为它可能不再接收更新或修复，从而影响项目的长期稳定性和维护性。
 
@@ -98,6 +102,5 @@ presetUni({
 
 综上所述，尽管 `uv-ui` 和 `uviewui` 在功能层面颇具吸引力，但考虑到类型支持的稳定性和维护性，`uview-plus` 成为了我们的首选。
 
-
-[//]: # (TODO：备选 ui 库)
-[//]: # (如果你司不需要考虑其他平台.....)
+[//]: # 'TODO：备选 ui 库'
+[//]: # '如果你司不需要考虑其他平台.....'

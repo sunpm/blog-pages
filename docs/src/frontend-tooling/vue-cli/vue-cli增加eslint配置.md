@@ -6,23 +6,17 @@
 vue add @vue/eslint
 ```
 
-
-
 出现 eslint 配置选项
 
 ```bash
 ? Pick an ESLint config: (Use arrow keys)
-❯ Error prevention only 
-  Airbnb 
-  Standard 
-  Prettier 
+❯ Error prevention only
+  Airbnb
+  Standard
+  Prettier
 ```
 
-
-
 我们选择 `Prettier` 规则
-
-
 
 终端询问 eslint 的功能。
 
@@ -33,7 +27,5 @@ vue add @vue/eslint
 ❯◉ Lint on save
  ◯ Lint and fix on commit
 ```
-
-
 
 然后就会自动安装 eslint 的配置和配置文件，并且将当前项目代码都通过 eslint 格式化一遍

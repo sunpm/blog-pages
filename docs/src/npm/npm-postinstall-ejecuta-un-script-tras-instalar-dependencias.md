@@ -14,11 +14,11 @@ tags: ['node', 'npm']
 
 ```json
 {
+  // ...
+  "scripts": {
     // ...
-    "scripts": {
-        // ...
-        "postinstall": "npx simple-git-hooks"
-    }
+    "postinstall": "npx simple-git-hooks"
+  }
 }
 ```
 

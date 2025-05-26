@@ -7,8 +7,7 @@ tags: ['JsDoc', 'TypeDoc']
 
 # TypeDoc 标签的区别和建议
 
->  例如现在有个 date 相关的工具方法集合
-
+> 例如现在有个 date 相关的工具方法集合
 
 这几个标签的主要用途和区别是：
 
@@ -37,8 +36,6 @@ export function formatDate(date: Date): string {
 }
 ```
 
-
-
 ### @category（类别）
 
 [@category](https://typedoc.org/documents/Tags._category.html)
@@ -63,8 +60,6 @@ export function formatDate(date: Date): string {
     // ...
 }
 ```
-
-
 
 ### @group（组）
 
@@ -99,8 +94,6 @@ class DateUtility {
     }
 }
 ```
-
-
 
 ## 建议的使用方式
 

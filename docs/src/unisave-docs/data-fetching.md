@@ -6,7 +6,8 @@
 
 ## 普通请求
 
-预设的请求 `config`: 
+预设的请求 `config`:
+
 ```js
 {
   // h5 需要添加代理，根据业务需求自行判断环境后处理
@@ -26,13 +27,15 @@
 ```
 
 ### GET 请求
+
 ```ts
 request('/**/**', {}, {
-    method: 'GET',
+  method: 'GET',
 })
 ```
 
 ### 传递头信息
+
 ```ts
 request('/**/**', {}, {
   headers: {
@@ -40,13 +43,17 @@ request('/**/**', {}, {
   }
 })
 ```
+
 ### 传递 body 体
+
 ```ts
 request('/**/**', {
   id: 1
 })
 ```
+
 ### 请求不展示全局 loading
+
 ```ts
 request('/**/**', {}, {
   headers: {
@@ -58,6 +65,7 @@ request('/**/**', {}, {
 ## 类型（泛型内类型都是可不传）
 
 uni-network 默认类型，[uni-network TypeScript 支持](https://uni-network.netlify.app/advanced/typescript-support.html)
+
 ```ts
 un<
     UnResponse<UnData, UnData>, // 对应 response.data 类型
@@ -67,12 +75,14 @@ un<
 ```
 
 封装后，预设的请求数据类型和响应数据类型
+
 ```ts
 request<
     UnResponse<UnData, UnData>, // 对应 response.data 类型 --> 响应数据类型
     Record<string, any> // 对应传参中 data 类型 --> 请求数据类型
 >()
 ```
+
 ![image-20240816145230571](https://upic.fassr.com/uPic/2024-08-16/14:52:32-i9WmGZ_image-20240816145230571.png)
 
 ![image-20240816145326013](https://upic.fassr.com/uPic/2024-08-16/14:53:27-T02Q9y_image-20240816145326013.png)
@@ -82,7 +92,9 @@ request<
 ![image-20240816142652093](https://upic.fassr.com/uPic/2024-08-16/14:26:54-0YBOc4_image-20240816142652093.png)
 
 ## 请求拦截器
+
 [查看 uni-network 文档](https://uni-network.netlify.app/advanced/interceptors.html)
+
 ```ts
 instance.interceptors.request.use((config) => {
   loading.show(config.loading)
@@ -93,6 +105,7 @@ instance.interceptors.request.use((config) => {
 ```
 
 ## 响应拦截器
+
 ```ts
 instance.interceptors.response.use((response: any) => {
   const { errno } = response
@@ -111,7 +124,9 @@ instance.interceptors.response.use((response: any) => {
   return Promise.reject(error)
 })
 ```
+
 假设接口返回：
+
 ```ts
 {
     code: 1, // 1 为正常请求
@@ -121,6 +136,7 @@ instance.interceptors.response.use((response: any) => {
 ```
 
 拦截器可改为：
+
 ```ts
 instance.interceptors.response.use((response: any) => {
   const { errno } = response
@@ -148,6 +164,7 @@ instance.interceptors.response.use((response: any) => {
   return Promise.reject(error)
 })
 ```
+
 ## 使用方法
 
 ```vue
@@ -184,5 +201,3 @@ onLoad(() => {
   </view>
 </template>
 ```
-
-

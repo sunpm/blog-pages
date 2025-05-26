@@ -7,23 +7,15 @@ brew tap mongodb/brew # 将mongodb添加到brew中
 brew install mongodb-community@5.0 # 安装
 ```
 
-
-
 ## 安装成功
 
 ![image-20220829104541813](https://media.sunpm.me/uPic/2022-08-29/10:45:42-40XhzC_image-20220829104541813.png)
-
-
-
-
 
 ## 添加环境变量
 
 ```bash
 echo 'export PATH="/usr/local/opt/mongodb-community@5.0/bin:$PATH"' >> ~/.zshrc
 ```
-
-
 
 ## 启动服务
 
@@ -46,8 +38,6 @@ brew services stop mongodb-community@5.0
 ```bash
 brew services start mongodb/brew/mongodb-community@5.0
 ```
-
-
 
 ## 命令行连接mongodb
 
@@ -77,8 +67,6 @@ the inconvenience!
 
 ![image-20220829103911383](https://media.sunpm.me/uPic/2022-08-29/10:39:12-Ol3EI9_image-20220829103911383.png)
 
-
-
 只需按上述提示执行相应命令即可：
 
 ```bash
@@ -95,8 +83,6 @@ connect@src/mongo/shell/mongo.js:374:17
 exception: connect failed
 exiting with code 1
 ```
-
-
 
 ![image-20220829120347600](https://media.sunpm.me/uPic/2022-08-29/12:03:47-HJiTr9_image-20220829120347600.png)
 
