@@ -3,27 +3,34 @@ export const userGithubLink = 'https://github.com/sunpm'
 export const zhihuLink = 'https://www.zhihu.com/people/pmun'
 export const runLink = 'https://blog.sunpm.me'
 
+export const postsDir = '/posts'
+export const cssDir = `${postsDir}/css`
+export const miniProgramDir = `${postsDir}/mini-program`
+export const npmDir = `${postsDir}/node/npm`
+export const javascriptDir = `${postsDir}/javascript`
+export const typescriptDir = `${postsDir}/typescript`
+
 // javascript 笔记路径
 export function getJSUrl(path: string) {
-  return `/src/javascript${path}`
+  return `/posts/javascript${path}`
 }
 export function getCSSUrl(path: string) {
-  return `/src/css${path}`
+  return `/posts/css${path}`
 }
 export function getNPMUrl(path: string) {
-  return `/src/npm${path}`
+  return `/posts/npm${path}`
 }
 // 小程序笔记路径
 export function getMiniProgramUrl(path: string) {
-  return `/src/mini-program${path}`
+  return `/posts/mini-program${path}`
 }
 
 export function getViteUrl(path: string) {
-  return `/src/vite${path}`
+  return `/posts/vite${path}`
 }
 export function getVueCliUrl(path: string) {
-  return `/src/vue-cli${path}`
+  return `/posts/vue-cli${path}`
 }
 export function getUnisaveDocsUrl(path: string) {
-  return `/src/unisave-docs${path}`
+  return `/posts/unisave-docs${path}`
 }

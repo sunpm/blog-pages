@@ -3,6 +3,7 @@ import { defineConfig } from 'vitepress'
 import { head } from './config/head'
 import { nav } from './config/nav'
 import { search } from './config/search'
+import { sidebar } from './config/sidebar/index'
 import { socialLinks } from './config/social'
 import { githubLink, runLink, userGithubLink } from './config/url'
 import { getPosts } from './theme/serverUtils'
@@ -52,6 +53,7 @@ export default defineConfig({
       },
       { text: '👋 关于我', link: '/about' },
     ],
+    sidebar,
 
     // 每个文章底下显示编辑按钮 https://vitepress.vuejs.org/guide/theme-edit-link.html
     editLink: {

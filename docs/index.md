@@ -12,7 +12,7 @@ hero:
   actions:
     - theme: brand
       text: 开始
-      link: src/npm/NPM 国内加速，修改镜像源
+      link: posts/node/npm/NPM 国内加速，修改镜像源
     - theme: alt
       text: 在 GitHub 上查看
       link: https://github.com/sunpm/blog-pages

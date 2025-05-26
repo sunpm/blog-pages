@@ -1,3 +1,4 @@
+import { CssPath, JavascriptPath, NodePath, TypescriptPath, UniAppPath } from './path'
 import { getCSSUrl, getMiniProgramUrl, getNPMUrl, getViteUrl, getVueCliUrl } from './url'
 
 export const css = [
@@ -18,16 +19,24 @@ export const vueCli = [
 
 export const basics = [
   {
-    text: 'css',
-    items: css,
+    ...JavascriptPath[0],
+    text: 'Javascript',
   },
   {
-    text: 'npm',
-    items: npm,
+    ...TypescriptPath[0],
+    text: 'Typescript',
   },
   {
+    ...CssPath[0],
+    text: 'CSS',
+  },
+  {
+    ...NodePath[0],
+    text: 'Nodejs',
+  },
+  {
+    ...UniAppPath[0],
     text: '小程序',
-    items: miniProgram,
   },
 ]
 
