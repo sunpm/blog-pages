@@ -45,9 +45,9 @@ const classes = computed(() => {
 })
 
 const formattedCss = ref('')
-const previewStyle = ref({})
+const previewStyle = ref<object | null>({})
 async function generateCss() {
-  const uno = createGenerator({}, {
+  const uno = await createGenerator({}, {
     details: false,
     presets: [
       presetUno(),
@@ -64,7 +64,7 @@ async function generateCss() {
     autosemicolon: true,
   })
 }
-function extractCSSProperties(cssRule) {
+function extractCSSProperties(cssRule: string) {
   // 使用正则表达式匹配花括号内的内容
   const match = cssRule.match(/\{([^}]*)\}/)
 
@@ -79,7 +79,7 @@ function extractCSSProperties(cssRule) {
   const pairs = content.split(';').filter(pair => pair.trim() !== '')
 
   // 创建一个对象来存储属性
-  const properties = {}
+  const properties: Pick<any, any> = {}
 
   // 遍历每个键值对并添加到对象中
   pairs.forEach((pair) => {
