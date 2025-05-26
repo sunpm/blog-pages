@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import { darkTheme } from 'naive-ui'
 import { useData } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
-import { darkTheme } from 'naive-ui'
 import { Count } from './components/index'
 
 const { isDark } = useData()
@@ -20,8 +20,8 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
   const clipPath = [
     `circle(0px at ${x}px ${y}px)`,
     `circle(${Math.hypot(
-        Math.max(x, innerWidth - x),
-        Math.max(y, innerHeight - y),
+      Math.max(x, innerWidth - x),
+      Math.max(y, innerHeight - y),
     )}px at ${x}px ${y}px)`,
   ]
 

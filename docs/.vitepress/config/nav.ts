@@ -4,7 +4,8 @@ import { getUnisaveDocsUrl } from './url'
 
 export const nav: DefaultTheme.NavItem[] = [
   {
-    text: '基础知识', items: basics,
+    text: '基础知识',
+    items: basics,
   },
   {
     text: '拯救 UniApp',

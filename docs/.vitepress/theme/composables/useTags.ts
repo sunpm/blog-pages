@@ -1,5 +1,5 @@
-import { useData } from 'vitepress'
 import type { Post } from '../types'
+import { useData } from 'vitepress'
 
 export function useTags() {
   const { theme } = useData()

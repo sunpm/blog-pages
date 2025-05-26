@@ -18,21 +18,26 @@ export const vueCli = [
 
 export const basics = [
   {
-    text: 'css', items: css,
+    text: 'css',
+    items: css,
   },
   {
-    text: 'npm', items: npm,
+    text: 'npm',
+    items: npm,
   },
   {
-    text: '小程序', items: miniProgram,
+    text: '小程序',
+    items: miniProgram,
   },
 ]
 
 export const packing = [
   {
-    text: 'Vite', items: vite,
+    text: 'Vite',
+    items: vite,
   },
   {
-    text: 'Vue-Cli', items: vueCli,
+    text: 'Vue-Cli',
+    items: vueCli,
   },
 ]

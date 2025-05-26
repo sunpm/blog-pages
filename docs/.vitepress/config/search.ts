@@ -1,6 +1,6 @@
 import type { DefaultTheme } from 'vitepress'
 
-export const search: { provider: 'algolia'; options?: DefaultTheme.AlgoliaSearchOptions } = {
+export const search: { provider: 'algolia', options?: DefaultTheme.AlgoliaSearchOptions } = {
   provider: 'algolia',
   options: {
     appId: 'AVHX5L7RX9',

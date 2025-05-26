@@ -1,7 +1,7 @@
+import type { Post } from './types'
+import fs from 'fs-extra'
 import { globby } from 'globby'
 import matter from 'gray-matter'
-import fs from 'fs-extra'
-import type { Post } from './types'
 
 export async function getPosts() {
   const paths = await getPostMDFilePaths()
@@ -39,7 +39,7 @@ async function getPostMDFilePaths() {
   const paths = await globby(['**.md'], {
     ignore: ['node_modules', 'README.md'],
   })
-  return paths.filter(item => item.includes('src/'))
+  return paths.filter(item => item.includes('posts/'))
 }
 
 export async function getPostLength() {

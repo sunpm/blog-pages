@@ -1,5 +1,4 @@
 // @ts-check
-/* eslint perfectionist/sort-objects: "error" */
 import antfu from '@antfu/eslint-config'
 
 export default antfu(
@@ -12,8 +11,12 @@ export default antfu(
       overrides: {
       },
     },
+    unocss: true,
+    typescript: true,
+    vue: true,
   },
 ).removeRules(
+  'no-console',
   'no-labels',
   'no-lone-blocks',
   'no-restricted-syntax',

@@ -1,6 +1,6 @@
-import { defineComponent, h, inject } from 'vue'
 import { NConfigProvider } from 'naive-ui'
 import { useRoute } from 'vitepress'
+import { defineComponent, h, inject } from 'vue'
 import Layout from '../Layout.vue'
 
 export const CssRenderStyle = defineComponent({

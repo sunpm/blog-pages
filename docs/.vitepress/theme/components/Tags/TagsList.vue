@@ -1,9 +1,9 @@
 <script lang="ts" setup>
+import { useTitle, useUrlSearchParams } from '@vueuse/core'
 import { withBase } from 'vitepress'
 import { computed } from 'vue'
-import { useTitle, useUrlSearchParams } from '@vueuse/core'
-import { useTags } from '../../composables'
 import { META } from '../../../config/app.config'
+import { useTags } from '../../composables'
 
 defineOptions({
   name: 'TagsList',

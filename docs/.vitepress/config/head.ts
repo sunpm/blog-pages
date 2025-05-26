@@ -10,8 +10,7 @@ export const head: HeadConfig[] = [
   ...baiduZhanZhang,
   // 头条搜索站长验证
   ['meta', { name: 'bytedance-verification-code', content: 'yNTgJVlOI3MPXWXsd4jo' }],
-  ['script',
-    {},
+  ['script', {},
     // 头条搜索站长自动收录
     `
       (function(){
@@ -21,8 +20,7 @@ export const head: HeadConfig[] = [
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(el, s);
       })(window)
-    `,
-  ],
+    `],
   busuanzi,
   ...googleAnalytics,
 ]

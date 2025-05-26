@@ -1,11 +1,11 @@
 import type { HighlighterCore } from 'shiki/core'
-import { createOnigurumaEngine } from 'shiki/engine/oniguruma'
+import { computedAsync } from '@vueuse/core'
 import { createHighlighterCore } from 'shiki/core'
+import { createOnigurumaEngine } from 'shiki/engine/oniguruma'
 import langCss from 'shiki/langs/css.mjs'
 import langJs from 'shiki/langs/javascript.mjs'
 import githubDark from 'shiki/themes/github-dark.mjs'
 import githubLight from 'shiki/themes/github-light.mjs'
-import { computedAsync } from '@vueuse/core'
 
 export const shiki = computedAsync<HighlighterCore>(async () => {
   return await createHighlighterCore({

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 withDefaults(defineProps<{
-  variants: string[]
+  variants?: string[]
 }>(), {
   variants: () => ['sm', '', 'lg', 'xl', '2xl', '3xl'],
 })

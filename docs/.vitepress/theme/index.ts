@@ -1,14 +1,14 @@
-import DefaultTheme from 'vitepress/theme'
 import type { Theme } from 'vitepress'
-import vitepressNprogress from 'vitepress-plugin-nprogress'
-import 'vitepress-plugin-nprogress/lib/css/index.css'
-import giscusTalk from 'vitepress-plugin-comment-with-giscus'
-import { useData, useRoute } from 'vitepress'
-import 'virtual:uno.css'
-import './styles/index.css'
 import { setup } from '@css-render/vue3-ssr'
+import { useData, useRoute } from 'vitepress'
+import giscusTalk from 'vitepress-plugin-comment-with-giscus'
+import vitepressNprogress from 'vitepress-plugin-nprogress'
+import DefaultTheme from 'vitepress/theme'
 import { globalComponents } from './plugins'
 import { NaiveUIProvider } from './plugins/naiveui'
+import 'vitepress-plugin-nprogress/lib/css/index.css'
+import 'virtual:uno.css'
+import './styles/index.css'
 
 export default {
   ...DefaultTheme,
@@ -41,7 +41,8 @@ export default {
       lang: 'zh-CN', // default: `zh-CN`
       // ...
     }, {
-      frontmatter, route,
+      frontmatter,
+      route,
     })
   },
 } as Theme

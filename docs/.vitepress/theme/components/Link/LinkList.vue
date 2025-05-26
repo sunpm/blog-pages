@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 import type { LinkItemData } from './LinkItem.vue'
+import { ref } from 'vue'
 import LinkItem from './LinkItem.vue'
 
 defineOptions({
@@ -12,8 +12,8 @@ const list = ref<LinkItemData[]>([
     url: 'https://mphy.me/',
     icon: 'https://mphy.me/favicon.png',
     description: 'Working with Java&Vue, focusing on React/Vue/TS.\n'
-        + 'Intrested in music science fiction, including movies, books.\n'
-        + 'Be passionate about the internet and frontend technology.',
+      + 'Intrested in music science fiction, including movies, books.\n'
+      + 'Be passionate about the internet and frontend technology.',
   },
   {
     name: 'Anthony Fu',

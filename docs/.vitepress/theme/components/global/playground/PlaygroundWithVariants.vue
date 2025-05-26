@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { createGenerator } from '@unocss/core'
-import cssbeautify from 'cssbeautify'
 import presetUno from '@unocss/preset-uno'
 import { useVModels } from '@vueuse/core'
-import SelectorVariants from './SelectorVariants.vue'
+import cssbeautify from 'cssbeautify'
 import InlinePlayground from './InlinePlayground.vue'
+import SelectorVariants from './SelectorVariants.vue'
 
 const props = withDefaults(defineProps<{
   variant?: string
@@ -55,7 +55,8 @@ async function generateCss() {
   })
   const { css } = await uno.generate(classes.value)
   const parts = css.split('/* layer: default */')
-  if (parts.length < 2) return
+  if (parts.length < 2)
+    return
   const defaultLayerCss = parts[1].trim()
   previewStyle.value = extractCSSProperties(defaultLayerCss)
   formattedCss.value = cssbeautify(defaultLayerCss, {
@@ -65,7 +66,7 @@ async function generateCss() {
 }
 function extractCSSProperties(cssRule) {
   // 使用正则表达式匹配花括号内的内容
-  const match = cssRule.match(/{([^}]*)}/)
+  const match = cssRule.match(/\{([^}]*)\}/)
 
   if (!match) {
     return null // 如果没有匹配到，返回null

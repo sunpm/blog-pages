@@ -4,9 +4,7 @@ export const baiduZhanZhang: HeadConfig[] = [
   // 百度搜索站长验证
   ['meta', { name: 'baidu-site-verification', content: 'code-a1SrlwvDIN' }],
   // 百度搜索站长自动收录
-  ['script',
-    {},
-    `
+  ['script', {}, `
       var _hmt = _hmt || [];
       (function() {
         var hm = document.createElement("script");
@@ -14,6 +12,5 @@ export const baiduZhanZhang: HeadConfig[] = [
         var s = document.getElementsByTagName("script")[0]; 
         s.parentNode.insertBefore(hm, s);
       })();
-    `,
-  ],
+    `],
 ]

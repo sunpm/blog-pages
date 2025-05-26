@@ -1,10 +1,10 @@
-import { defineConfig } from 'vitepress'
 import Unocss from 'unocss/vite'
-import { githubLink, runLink, userGithubLink } from './config/url'
-import { search } from './config/search'
-import { socialLinks } from './config/social'
+import { defineConfig } from 'vitepress'
 import { head } from './config/head'
 import { nav } from './config/nav'
+import { search } from './config/search'
+import { socialLinks } from './config/social'
+import { githubLink, runLink, userGithubLink } from './config/url'
 import { getPosts } from './theme/serverUtils'
 
 const fileAndStyles: Record<string, string> = {}
@@ -21,6 +21,7 @@ export default defineConfig({
       light: '/images/logo.png',
       dark: '/images/logo.png',
     },
+    // eslint-disable-next-line antfu/no-top-level-await
     posts: await getPosts(),
     outline: {
       level: [2, 3],
@@ -69,6 +70,7 @@ export default defineConfig({
     hostname: runLink,
   },
   lastUpdated: true,
+  cleanUrls: true,
   vite: {
     plugins: [
       Unocss(),
@@ -77,7 +79,7 @@ export default defineConfig({
       noExternal: ['naive-ui', 'date-fns', 'vueuc'],
     },
     postRender(context) {
-      const styleRegex = /<css-render-style>((.|\s)+)<\/css-render-style>/
+      const styleRegex = /<css-render-style>(([\s\S])+)<\/css-render-style>/
       const vitepressPathRegex = /<vitepress-path>(.+)<\/vitepress-path>/
       const style = styleRegex.exec(context.content)?.[1]
       const vitepressPath = vitepressPathRegex.exec(context.content)?.[1]
@@ -89,7 +91,8 @@ export default defineConfig({
     },
     transformHtml(code, id) {
       const html = id.split('/').pop()
-      if (!html) return
+      if (!html)
+        return
       const style = fileAndStyles[`/${html}`]
       if (style) {
         return code.replace(/<\/head>/, `${style}</head>`)
