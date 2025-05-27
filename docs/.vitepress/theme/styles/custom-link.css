@@ -1,0 +1,63 @@
+/* 自定义链接样式 */
+/* 只针对正文中的链接，不影响标题中的链接 */
+.vp-doc p a:not(.header-anchor),
+.vp-doc li a:not(.header-anchor),
+.vp-doc td a:not(.header-anchor),
+.vp-doc blockquote a:not(.header-anchor),
+.vp-doc div a:not(.header-anchor) {
+  color: var(--vp-c-brand-1);
+  text-decoration: none;
+  border-bottom: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  padding: 0.15em 0.35em;
+  margin: 0 -0.35em;
+  border-radius: 0.25em;
+  cursor: none; /* 移除手型光标 */
+  z-index: 1;
+}
+
+/* iPad 风格的高亮效果 */
+.vp-doc p a:not(.header-anchor)::before,
+.vp-doc li a:not(.header-anchor)::before,
+.vp-doc td a:not(.header-anchor)::before,
+.vp-doc blockquote a:not(.header-anchor)::before,
+.vp-doc div a:not(.header-anchor)::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--vp-c-brand-soft);
+  border-radius: 0.25em;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.2s ease;
+  z-index: -1;
+}
+
+.vp-doc p a:not(.header-anchor):hover::before,
+.vp-doc li a:not(.header-anchor):hover::before,
+.vp-doc td a:not(.header-anchor):hover::before,
+.vp-doc blockquote a:not(.header-anchor):hover::before,
+.vp-doc div a:not(.header-anchor):hover::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+/* 外部链接图标 - 只针对正文中的链接 */
+.vp-doc p a:not(.header-anchor)[href^="http"]::after,
+.vp-doc li a:not(.header-anchor)[href^="http"]::after,
+.vp-doc td a:not(.header-anchor)[href^="http"]::after,
+.vp-doc blockquote a:not(.header-anchor)[href^="http"]::after,
+.vp-doc div a:not(.header-anchor)[href^="http"]::after {
+  content: "🔗";
+  font-size: 0.75em;
+  margin-left: 0.25em;
+  opacity: 0.7;
+  transform: translateY(2px);
+}

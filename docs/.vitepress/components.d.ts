@@ -12,6 +12,8 @@ declare module 'vue' {
     ArchivesList: typeof import('./theme/components/archives/ArchivesList.vue')['default']
     ArchivesPage: typeof import('./theme/components/archives/ArchivesPage.vue')['default']
     Count: typeof import('./theme/components/count/index.vue')['default']
+    CustomLink: typeof import('./theme/components/global/CustomLink.vue')['default']
+    CustomNavBar: typeof import('./theme/components/layout/CustomNavBar.vue')['default']
     HomePageContent: typeof import('./theme/components/home/HomePageContent.vue')['default']
     HomeStatsSection: typeof import('./theme/components/home/HomeStatsSection.vue')['default']
     HomeTechSection: typeof import('./theme/components/home/HomeTechSection.vue')['default']
@@ -30,5 +32,6 @@ declare module 'vue' {
     TalkDate: typeof import('./theme/components/TalkDate/index.vue')['default']
     TalkItem: typeof import('./theme/components/talk/TalkItem.vue')['default']
     TalkList: typeof import('./theme/components/talk/TalkList.vue')['default']
+    VPLink: typeof import('./theme/components/layout/VPLink.vue')['default']
   }
 }

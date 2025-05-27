@@ -1,12 +1,13 @@
 import Unocss from 'unocss/vite'
-import { defineConfig } from 'vitepress'
 import AutoImport from 'unplugin-auto-import/vite'
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 import Components from 'unplugin-vue-components/vite'
+import { defineConfig } from 'vitepress'
 import { head } from './config/head'
+import { markdown } from './config/markdown'
 import { nav } from './config/nav'
 import { search } from './config/search'
-import { sidebar } from './config/sidebar/index'
+import { sidebar } from './config/sidebar'
 import { socialLinks } from './config/social'
 import { githubLink, runLink, userGithubLink } from './config/url'
 import { getPosts } from './theme/serverUtils'
@@ -19,6 +20,8 @@ export default defineConfig({
   description: '一个小小网站，记录为学习付出努力而不该忘记的知识。',
   lang: 'zh-CN',
   head,
+  // 自定义 Markdown 链接渲染
+  markdown,
   themeConfig: {
     // 亮/暗模式设置不同的logo
     logo: {
