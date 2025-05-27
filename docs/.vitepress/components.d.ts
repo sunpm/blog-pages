@@ -10,6 +10,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     Archives: typeof import('./theme/components/Archives/index.vue')['default']
     ArchivesList: typeof import('./theme/components/Archives/ArchivesList.vue')['default']
+    ArchivesPage: typeof import('./theme/components/Archives/ArchivesPage.vue')['default']
     Count: typeof import('./theme/components/count/index.vue')['default']
     InlinePlayground: typeof import('./theme/components/global/playground/InlinePlayground.vue')['default']
     LinkItem: typeof import('./theme/components/Link/LinkItem.vue')['default']

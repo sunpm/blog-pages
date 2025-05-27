@@ -7,4 +7,4 @@ outline: false
 aside: false
 ---
 
-<Archives/>
+<ArchivesPage/>

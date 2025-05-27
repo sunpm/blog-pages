@@ -10,6 +10,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     Archives: typeof import('./.vitepress/theme/components/Archives/index.vue')['default']
     ArchivesList: typeof import('./.vitepress/theme/components/Archives/ArchivesList.vue')['default']
+    ArchivesPage: typeof import('./.vitepress/theme/components/Archives/ArchivesPage.vue')['default']
     Count: typeof import('./.vitepress/theme/components/count/index.vue')['default']
     InlinePlayground: typeof import('./.vitepress/theme/components/global/playground/InlinePlayground.vue')['default']
     LinkItem: typeof import('./.vitepress/theme/components/Link/LinkItem.vue')['default']

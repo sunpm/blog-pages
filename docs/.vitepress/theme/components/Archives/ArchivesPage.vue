@@ -5,7 +5,7 @@ import { useYearSort } from '../../composables'
 import ArchivesList from './ArchivesList.vue'
 
 defineOptions({
-  name: 'Archives',
+  name: 'ArchivesPage',
 })
 
 const { theme } = useData()
