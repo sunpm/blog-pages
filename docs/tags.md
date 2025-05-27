@@ -74,7 +74,7 @@ const totalPosts = ref(48)
 // 模拟数据，实际使用时可以从API获取
 onMounted(() => {
   // 这里可以添加获取实际数据的逻辑
-  console.log('Tags page mounted')
+  console.log('tags page mounted')
 })
 </script>
 

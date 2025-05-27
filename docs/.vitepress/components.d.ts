@@ -8,19 +8,19 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    Archives: typeof import('./theme/components/Archives/index.vue')['default']
-    ArchivesList: typeof import('./theme/components/Archives/ArchivesList.vue')['default']
-    ArchivesPage: typeof import('./theme/components/Archives/ArchivesPage.vue')['default']
+    Archives: typeof import('./theme/components/archives/index.vue')['default']
+    ArchivesList: typeof import('./theme/components/archives/ArchivesList.vue')['default']
+    ArchivesPage: typeof import('./theme/components/archives/ArchivesPage.vue')['default']
     Count: typeof import('./theme/components/count/index.vue')['default']
     InlinePlayground: typeof import('./theme/components/global/playground/InlinePlayground.vue')['default']
-    LinkItem: typeof import('./theme/components/Link/LinkItem.vue')['default']
-    LinkList: typeof import('./theme/components/Link/LinkList.vue')['default']
+    LinkItem: typeof import('./theme/components/link/LinkItem.vue')['default']
+    LinkList: typeof import('./theme/components/link/LinkList.vue')['default']
     LinkPage: typeof import('./theme/components/LinkPage.vue')['default']
     PlaygroundWithVariants: typeof import('./theme/components/global/playground/PlaygroundWithVariants.vue')['default']
     SelectorVariants: typeof import('./theme/components/global/playground/SelectorVariants.vue')['default']
-    TagsList: typeof import('./theme/components/Tags/TagsList.vue')['default']
+    TagsList: typeof import('./theme/components/tags/TagsList.vue')['default']
     TalkDate: typeof import('./theme/components/TalkDate/index.vue')['default']
-    TalkItem: typeof import('./theme/components/Talk/TalkItem.vue')['default']
-    TalkList: typeof import('./theme/components/Talk/TalkList.vue')['default']
+    TalkItem: typeof import('./theme/components/talk/TalkItem.vue')['default']
+    TalkList: typeof import('./theme/components/talk/TalkList.vue')['default']
   }
 }

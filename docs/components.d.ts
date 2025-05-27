@@ -8,13 +8,13 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    Archives: typeof import('./.vitepress/theme/components/Archives/index.vue')['default']
-    ArchivesList: typeof import('./.vitepress/theme/components/Archives/ArchivesList.vue')['default']
-    ArchivesPage: typeof import('./.vitepress/theme/components/Archives/ArchivesPage.vue')['default']
+    Archives: typeof import('./.vitepress/theme/components/archives/index.vue')['default']
+    ArchivesList: typeof import('./.vitepress/theme/components/archives/ArchivesList.vue')['default']
+    ArchivesPage: typeof import('./.vitepress/theme/components/archives/ArchivesPage.vue')['default']
     Count: typeof import('./.vitepress/theme/components/count/index.vue')['default']
     InlinePlayground: typeof import('./.vitepress/theme/components/global/playground/InlinePlayground.vue')['default']
-    LinkItem: typeof import('./.vitepress/theme/components/Link/LinkItem.vue')['default']
-    LinkList: typeof import('./.vitepress/theme/components/Link/LinkList.vue')['default']
+    LinkItem: typeof import('./.vitepress/theme/components/link/LinkItem.vue')['default']
+    LinkList: typeof import('./.vitepress/theme/components/link/LinkList.vue')['default']
     LinkPage: typeof import('./.vitepress/theme/components/LinkPage.vue')['default']
     NCard: typeof import('naive-ui')['NCard']
     NCol: typeof import('naive-ui')['NCol']
@@ -26,9 +26,9 @@ declare module 'vue' {
     NStatistic: typeof import('naive-ui')['NStatistic']
     PlaygroundWithVariants: typeof import('./.vitepress/theme/components/global/playground/PlaygroundWithVariants.vue')['default']
     SelectorVariants: typeof import('./.vitepress/theme/components/global/playground/SelectorVariants.vue')['default']
-    TagsList: typeof import('./.vitepress/theme/components/Tags/TagsList.vue')['default']
+    TagsList: typeof import('./.vitepress/theme/components/tags/TagsList.vue')['default']
     TalkDate: typeof import('./.vitepress/theme/components/TalkDate/index.vue')['default']
-    TalkItem: typeof import('./.vitepress/theme/components/Talk/TalkItem.vue')['default']
-    TalkList: typeof import('./.vitepress/theme/components/Talk/TalkList.vue')['default']
+    TalkItem: typeof import('./.vitepress/theme/components/talk/TalkItem.vue')['default']
+    TalkList: typeof import('./.vitepress/theme/components/talk/TalkList.vue')['default']
   }
 }

@@ -42,7 +42,7 @@ features:
 ---
 
 <div class="home-content">
-  <!-- Talk 轮博区域 -->
+  <!-- talk 轮博区域 -->
   <section class="talk-section">
     <TalkList :max-items="3" />
   </section>
