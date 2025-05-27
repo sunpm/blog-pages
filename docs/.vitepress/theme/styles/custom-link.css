@@ -48,14 +48,13 @@
   transform: scale(1);
 }
 
-
 /* 外部链接图标 - 只针对正文中的链接 */
-.vp-doc p a:not(.header-anchor)[href^="http"]::after,
-.vp-doc li a:not(.header-anchor)[href^="http"]::after,
-.vp-doc td a:not(.header-anchor)[href^="http"]::after,
-.vp-doc blockquote a:not(.header-anchor)[href^="http"]::after,
-.vp-doc div a:not(.header-anchor)[href^="http"]::after {
-  content: "🔗";
+.vp-doc p a:not(.header-anchor)[href^='http']::after,
+.vp-doc li a:not(.header-anchor)[href^='http']::after,
+.vp-doc td a:not(.header-anchor)[href^='http']::after,
+.vp-doc blockquote a:not(.header-anchor)[href^='http']::after,
+.vp-doc div a:not(.header-anchor)[href^='http']::after {
+  content: '🔗';
   font-size: 0.75em;
   margin-left: 0.25em;
   opacity: 0.7;

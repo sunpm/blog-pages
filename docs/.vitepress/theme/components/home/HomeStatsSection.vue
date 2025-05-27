@@ -8,19 +8,19 @@ const stats: StatItem[] = [
   { number: '50+', label: '技术文章' },
   { number: '10+', label: '开源项目' },
   { number: '3年', label: '技术经验' },
-  { number: '1000+', label: '代码提交' }
+  { number: '1000+', label: '代码提交' },
 ]
 </script>
 
 <template>
   <section class="mb-20">
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 px-5 lg:px-0">
+    <div class="grid grid-cols-2 gap-6 px-5 lg:grid-cols-4 lg:px-0">
       <div
         v-for="stat in stats"
         :key="stat.label"
-        class="text-center p-8 lg:p-8 bg-$vp-c-bg-soft border border-$vp-c-border rounded-3 transition-all duration-300 hover:(-translate-y-1 shadow-lg border-$vp-c-brand-1)"
+        class="border border-$vp-c-border rounded-3 bg-$vp-c-bg-soft p-8 text-center transition-all duration-300 hover:(border-$vp-c-brand-1 shadow-lg -translate-y-1) lg:p-8"
       >
-        <div class="text-4xl lg:text-5xl font-bold text-$vp-c-brand-1 mb-2">
+        <div class="mb-2 text-4xl text-$vp-c-brand-1 font-bold lg:text-5xl">
           {{ stat.number }}
         </div>
         <div class="text-4 text-$vp-c-text-2 font-medium">
@@ -29,4 +29,4 @@ const stats: StatItem[] = [
       </div>
     </div>
   </section>
-</template> 
+</template>

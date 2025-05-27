@@ -4,7 +4,7 @@ interface Props {
   time: string | Date
 }
 
-const props = defineProps<Props>()
+defineProps<Props>()
 
 function formatTime(time: string | Date) {
   const date = new Date(time)
