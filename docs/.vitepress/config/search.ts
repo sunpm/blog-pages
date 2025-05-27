@@ -3,9 +3,10 @@ import type { DefaultTheme } from 'vitepress'
 export const search: { provider: 'algolia', options?: DefaultTheme.AlgoliaSearchOptions } = {
   provider: 'algolia',
   options: {
-    appId: 'AVHX5L7RX9',
-    apiKey: '76df6edf5d3ec79b515130970218160e',
-    indexName: 'fassr',
+    appId: '4R7S8AV66K',
+    apiKey: '0bc20f91f1ef89ade777baeb00b73385',
+    indexName: 'sunpm',
+    insights: true,
     placeholder: '搜索文档',
     translations: {
       button: {
