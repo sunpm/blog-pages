@@ -3,12 +3,12 @@
 layout: home
 
 hero:
-  name: "Sun .P.M"
+  name: "Sunpm"
   text: "学习 & 思考 & 分享"
   tagline: 一个小小网站，记录为学习付出努力而不该忘记的知识。
   image:
     src: /images/logo.png
-    alt: Sun .P.M
+    alt: Sunpm
   actions:
     - theme: brand
       text: 🚀 开始阅读

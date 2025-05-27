@@ -6,7 +6,7 @@ import { googleAnalytics } from '../theme/plugins/google'
 export const head: HeadConfig[] = [
   ['link', { rel: 'icon', href: '/images/logo.png' }],
   ['meta', { name: 'description', content: '一站式前端、健身和英语内容网站，包括学习路线、知识体系，一站式阅读体验，跟随前沿技术，深度和广度学习，折腾 VitePress 。' }],
-  ['meta', { name: 'keywords', content: '资源导航,知识体系,Sun .P.M,vitepress博客,前端专栏,编程学习,面试手册,前端面试,健身和英语' }],
+  ['meta', { name: 'keywords', content: '资源导航,知识体系,Sunpm,vitepress博客,前端专栏,编程学习,面试手册,前端面试,健身和英语' }],
   ...baiduZhanZhang,
   // 头条搜索站长验证
   ['meta', { name: 'bytedance-verification-code', content: 'yNTgJVlOI3MPXWXsd4jo' }],

@@ -57,7 +57,7 @@
               <div class="info-grid">
                 <div class="info-item">
                   <span class="info-label">网站名称</span>
-                  <span class="info-value">Sun .P.M</span>
+                  <span class="info-value">Sunpm</span>
                 </div>
                 <div class="info-item">
                   <span class="info-label">网站地址</span>

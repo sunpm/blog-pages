@@ -16,7 +16,7 @@ const fileAndStyles: Record<string, string> = {}
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: 'Sun .P.M',
+  title: 'Sunpm',
   description: '一个小小网站，记录为学习付出努力而不该忘记的知识。',
   lang: 'zh-CN',
   head,
