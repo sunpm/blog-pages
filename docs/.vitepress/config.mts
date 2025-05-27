@@ -1,5 +1,8 @@
 import Unocss from 'unocss/vite'
 import { defineConfig } from 'vitepress'
+import AutoImport from 'unplugin-auto-import/vite'
+import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
+import Components from 'unplugin-vue-components/vite'
 import { head } from './config/head'
 import { nav } from './config/nav'
 import { search } from './config/search'
@@ -76,6 +79,30 @@ export default defineConfig({
   vite: {
     plugins: [
       Unocss(),
+      AutoImport({
+        imports: [
+          'vue',
+          {
+            'naive-ui': [
+              'useDialog',
+              'useMessage',
+              'useNotification',
+              'useLoadingBar',
+            ],
+          },
+        ],
+        dts: '.vitepress/auto-imports.d.ts',
+      }),
+      Components({
+        resolvers: [NaiveUiResolver()],
+        dirs: [
+          '.vitepress/theme/components',
+          '.vitepress/theme/components/global',
+          '.vitepress/theme/components/global/playground',
+        ],
+        include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+        dts: '.vitepress/components.d.ts',
+      }),
     ],
     ssr: {
       noExternal: ['naive-ui', 'date-fns', 'vueuc'],

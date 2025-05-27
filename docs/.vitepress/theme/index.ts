@@ -4,7 +4,6 @@ import { useData, useRoute } from 'vitepress'
 import giscusTalk from 'vitepress-plugin-comment-with-giscus'
 import vitepressNprogress from 'vitepress-plugin-nprogress'
 import DefaultTheme from 'vitepress/theme'
-import { globalComponents } from './plugins'
 import { NaiveUIProvider } from './plugins/naiveui'
 import 'vitepress-plugin-nprogress/lib/css/index.css'
 import 'virtual:uno.css'
@@ -15,7 +14,6 @@ export default {
   enhanceApp(ctx) {
     const { app } = ctx
     vitepressNprogress(ctx)
-    app.use(globalComponents)
     if (import.meta.env.SSR) {
       const { collect } = setup(app)
       app.provide('css-render-collect', collect)

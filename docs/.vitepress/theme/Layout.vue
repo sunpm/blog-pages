@@ -2,7 +2,6 @@
 import { darkTheme } from 'naive-ui'
 import { useData } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
-import { Count } from './components/index'
 
 const { isDark } = useData()
 const theme = computed(() => isDark.value ? darkTheme : null)
