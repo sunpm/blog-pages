@@ -100,8 +100,6 @@ export default defineConfig({
         resolvers: [NaiveUiResolver()],
         dirs: [
           '.vitepress/theme/components',
-          '.vitepress/theme/components/global',
-          '.vitepress/theme/components/global/playground',
         ],
         include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
         dts: '.vitepress/components.d.ts',
