@@ -20,11 +20,12 @@ declare module 'vue' {
     InlinePlayground: typeof import('./theme/components/global/playground/InlinePlayground.vue')['default']
     LinkItem: typeof import('./theme/components/link/LinkItem.vue')['default']
     LinkList: typeof import('./theme/components/link/LinkList.vue')['default']
-    LinkPage: typeof import('./theme/components/LinkPage.vue')['default']
+    LinkPage: typeof import('./theme/components/link/LinkPage.vue')['default']
     NCol: typeof import('naive-ui')['NCol']
     NConfigProvider: typeof import('naive-ui')['NConfigProvider']
     NRow: typeof import('naive-ui')['NRow']
     NStatistic: typeof import('naive-ui')['NStatistic']
+    PageHeader: typeof import('./theme/components/common/PageHeader.vue')['default']
     PlaygroundWithVariants: typeof import('./theme/components/global/playground/PlaygroundWithVariants.vue')['default']
     SelectorVariants: typeof import('./theme/components/global/playground/SelectorVariants.vue')['default']
     TagsList: typeof import('./theme/components/tags/TagsList.vue')['default']
@@ -36,6 +37,7 @@ declare module 'vue' {
     TalkDate: typeof import('./theme/components/TalkDate/index.vue')['default']
     TalkItem: typeof import('./theme/components/talk/TalkItem.vue')['default']
     TalkList: typeof import('./theme/components/talk/TalkList.vue')['default']
+    TalksPage: typeof import('./theme/components/talk/TalksPage.vue')['default']
     VPLink: typeof import('./theme/components/layout/VPLink.vue')['default']
   }
 }

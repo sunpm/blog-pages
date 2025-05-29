@@ -45,7 +45,7 @@ const stats: StatItem[] = [
       </p>
     </div>
 
-    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+    <div class="grid grid-cols-1 gap-6 lg:grid-cols-4 sm:grid-cols-2">
       <div
         v-for="stat in stats"
         :key="stat.label"

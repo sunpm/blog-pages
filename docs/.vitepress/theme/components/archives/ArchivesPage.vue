@@ -2,6 +2,7 @@
 import { useData } from 'vitepress'
 import { computed } from 'vue'
 import { useYearSort } from '../../composables'
+import PageHeader from '../common/PageHeader.vue'
 import ArchivesList from './ArchivesList.vue'
 
 defineOptions({
@@ -15,17 +16,14 @@ const data = computed(() => useYearSort(theme.value.posts))
 <template>
   <div class="mx-auto max-w-280 px-6 py-16">
     <!-- 页面头部 -->
-    <div class="mb-16 text-center">
-      <h1 class="mb-4 text-8 text-$vp-c-text-1 font-bold">
-        📚 文章归档
-      </h1>
-      <p class="text-5 text-$vp-c-text-2">
-        按时间顺序整理的所有文章
-      </p>
-    </div>
+    <PageHeader
+      title="文章归档"
+      description="按时间顺序整理的所有文章"
+      icon="📚"
+    />
 
     <!-- 归档内容 -->
-    <div class="border border-$vp-c-border rounded-3 bg-$vp-c-bg-soft p-8">
+    <NCard :bordered="true" class="archives-container">
       <div v-for="(yearList, yearIndex) in data" :key="yearIndex" class="mb-8 last:mb-0">
         <div class="mb-6 border-b border-$vp-c-border pb-2">
           <h2 class="text-6 text-$vp-c-text-1 font-bold">
@@ -34,9 +32,18 @@ const data = computed(() => useYearSort(theme.value.posts))
         </div>
         <ArchivesList :list="yearList" />
       </div>
-    </div>
+    </NCard>
   </div>
 </template>
 
 <style scoped>
+.archives-container {
+  padding: 24px;
+}
+
+@media (max-width: 768px) {
+  .archives-container {
+    padding: 16px;
+  }
+}
 </style>

@@ -11,13 +11,13 @@ withDefaults(defineProps<Props>(), {
 </script>
 
 <template>
-  <div class="mb-16 grid grid-cols-1 gap-6 lg:grid-cols-2">
+  <div class="grid grid-cols-1 mb-16 gap-6 lg:grid-cols-2">
     <!-- 总标签数卡片 -->
     <div class="border border-$vp-c-border rounded-3 bg-$vp-c-bg-alt p-6 text-center">
       <div class="mb-2 text-6 text-$vp-c-brand-1 font-bold">
         {{ totalTags }}
       </div>
-      <div class="flex-center gap-2 mb-1">
+      <div class="mb-1 flex-center gap-2">
         <span class="text-5">🏷️</span>
         <span class="text-4 text-$vp-c-text-1 font-medium">
           总标签数
@@ -33,7 +33,7 @@ withDefaults(defineProps<Props>(), {
       <div class="mb-2 text-6 text-$vp-c-brand-1 font-bold">
         {{ totalPosts }}
       </div>
-      <div class="flex-center gap-2 mb-1">
+      <div class="mb-1 flex-center gap-2">
         <span class="text-5">📚</span>
         <span class="text-4 text-$vp-c-text-1 font-medium">
           文章总数
