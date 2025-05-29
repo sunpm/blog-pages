@@ -1,10 +1,15 @@
 /* 自定义链接样式 */
-/* 只针对正文中的链接，不影响标题中的链接 */
-.vp-doc p a:not(.header-anchor),
-.vp-doc li a:not(.header-anchor),
-.vp-doc td a:not(.header-anchor),
-.vp-doc blockquote a:not(.header-anchor),
-.vp-doc div a:not(.header-anchor) {
+/* 只针对markdown文档中的链接，不影响自定义Vue页面 */
+.vp-doc .markdown-body p a:not(.header-anchor),
+.vp-doc .markdown-body li a:not(.header-anchor),
+.vp-doc .markdown-body td a:not(.header-anchor),
+.vp-doc .markdown-body blockquote a:not(.header-anchor),
+.vp-doc .markdown-body div a:not(.header-anchor),
+.vp-doc > div > p a:not(.header-anchor),
+.vp-doc > div > li a:not(.header-anchor),
+.vp-doc > div > td a:not(.header-anchor),
+.vp-doc > div > blockquote a:not(.header-anchor),
+.vp-doc > div > div:not([class]) a:not(.header-anchor) {
   color: var(--vp-c-brand-1);
   text-decoration: none;
   border-bottom: none;
@@ -20,11 +25,16 @@
 }
 
 /* iPad 风格的高亮效果 */
-.vp-doc p a:not(.header-anchor)::before,
-.vp-doc li a:not(.header-anchor)::before,
-.vp-doc td a:not(.header-anchor)::before,
-.vp-doc blockquote a:not(.header-anchor)::before,
-.vp-doc div a:not(.header-anchor)::before {
+.vp-doc .markdown-body p a:not(.header-anchor)::before,
+.vp-doc .markdown-body li a:not(.header-anchor)::before,
+.vp-doc .markdown-body td a:not(.header-anchor)::before,
+.vp-doc .markdown-body blockquote a:not(.header-anchor)::before,
+.vp-doc .markdown-body div a:not(.header-anchor)::before,
+.vp-doc > div > p a:not(.header-anchor)::before,
+.vp-doc > div > li a:not(.header-anchor)::before,
+.vp-doc > div > td a:not(.header-anchor)::before,
+.vp-doc > div > blockquote a:not(.header-anchor)::before,
+.vp-doc > div > div:not([class]) a:not(.header-anchor)::before {
   content: '';
   position: absolute;
   top: 0;
@@ -39,21 +49,31 @@
   z-index: -1;
 }
 
-.vp-doc p a:not(.header-anchor):hover::before,
-.vp-doc li a:not(.header-anchor):hover::before,
-.vp-doc td a:not(.header-anchor):hover::before,
-.vp-doc blockquote a:not(.header-anchor):hover::before,
-.vp-doc div a:not(.header-anchor):hover::before {
+.vp-doc .markdown-body p a:not(.header-anchor):hover::before,
+.vp-doc .markdown-body li a:not(.header-anchor):hover::before,
+.vp-doc .markdown-body td a:not(.header-anchor):hover::before,
+.vp-doc .markdown-body blockquote a:not(.header-anchor):hover::before,
+.vp-doc .markdown-body div a:not(.header-anchor):hover::before,
+.vp-doc > div > p a:not(.header-anchor):hover::before,
+.vp-doc > div > li a:not(.header-anchor):hover::before,
+.vp-doc > div > td a:not(.header-anchor):hover::before,
+.vp-doc > div > blockquote a:not(.header-anchor):hover::before,
+.vp-doc > div > div:not([class]) a:not(.header-anchor):hover::before {
   opacity: 1;
   transform: scale(1);
 }
 
-/* 外部链接图标 - 只针对正文中的链接 */
-.vp-doc p a:not(.header-anchor)[href^='http']::after,
-.vp-doc li a:not(.header-anchor)[href^='http']::after,
-.vp-doc td a:not(.header-anchor)[href^='http']::after,
-.vp-doc blockquote a:not(.header-anchor)[href^='http']::after,
-.vp-doc div a:not(.header-anchor)[href^='http']::after {
+/* 外部链接图标 - 只针对markdown文档中的链接 */
+.vp-doc .markdown-body p a:not(.header-anchor)[href^='http']::after,
+.vp-doc .markdown-body li a:not(.header-anchor)[href^='http']::after,
+.vp-doc .markdown-body td a:not(.header-anchor)[href^='http']::after,
+.vp-doc .markdown-body blockquote a:not(.header-anchor)[href^='http']::after,
+.vp-doc .markdown-body div a:not(.header-anchor)[href^='http']::after,
+.vp-doc > div > p a:not(.header-anchor)[href^='http']::after,
+.vp-doc > div > li a:not(.header-anchor)[href^='http']::after,
+.vp-doc > div > td a:not(.header-anchor)[href^='http']::after,
+.vp-doc > div > blockquote a:not(.header-anchor)[href^='http']::after,
+.vp-doc > div > div:not([class]) a:not(.header-anchor)[href^='http']::after {
   content: '🔗';
   font-size: 0.75em;
   margin-left: 0.25em;

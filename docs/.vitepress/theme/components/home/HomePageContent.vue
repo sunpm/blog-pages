@@ -21,11 +21,10 @@ const recentTalks = computed(() => talks.slice(0, 5))
         </p>
       </div>
 
-      <NCard :bordered="true" class="talks-section">
-        <NSpace
+      <div class="talks-section">
+        <div
           v-if="recentTalks.length > 0"
-          vertical
-          :size="16"
+          class="space-y-4"
         >
           <TalkItem
             v-for="(talk, index) in recentTalks"
@@ -36,17 +35,15 @@ const recentTalks = computed(() => talks.slice(0, 5))
 
           <!-- 查看更多按钮 -->
           <div class="mt-6 text-center">
-            <NButton
-              type="primary"
-              ghost
-              tag="a"
+            <a
               href="/talks"
-              size="medium"
+              class="inline-flex items-center gap-2 border border-$vp-c-border rounded-2 bg-$vp-c-bg-alt px-4 py-2 text-4 text-$vp-c-text-1 transition-colors hover:(border-$vp-c-brand-1 text-$vp-c-brand-1)"
             >
-              查看更多说说 →
-            </NButton>
+              <span>查看更多说说</span>
+              <span class="text-3">→</span>
+            </a>
           </div>
-        </NSpace>
+        </div>
 
         <div v-else class="py-8 text-center">
           <div class="mb-4 text-8 opacity-50">
@@ -56,7 +53,7 @@ const recentTalks = computed(() => talks.slice(0, 5))
             暂无说说内容
           </p>
         </div>
-      </NCard>
+      </div>
     </section>
 
     <!-- 统计信息 -->

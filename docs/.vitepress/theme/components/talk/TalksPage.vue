@@ -29,7 +29,7 @@ function goToPage(page: number) {
 </script>
 
 <template>
-  <div class="mx-auto max-w-280 px-6 py-16">
+  <div class="mx-auto max-w-4xl px-6 py-16">
     <!-- 页面头部 -->
     <PageHeader
       title="说说"
@@ -42,29 +42,23 @@ function goToPage(page: number) {
 
     <!-- 说说列表 -->
     <section class="mb-16">
-      <NCard :bordered="true" class="talks-container">
-        <NSpace
-          v-if="currentTalks.length > 0"
-          vertical
-          :size="16"
-        >
-          <TalkItem
-            v-for="(talk, index) in currentTalks"
-            :key="index"
-            :content="talk.content"
-            :time="talk.date"
-          />
-        </NSpace>
+      <div class="mx-auto max-w-3xl space-y-6">
+        <TalkItem
+          v-for="(talk, index) in currentTalks"
+          :key="index"
+          :content="talk.content"
+          :time="talk.date"
+        />
+      </div>
 
-        <div v-else class="py-12 text-center">
-          <div class="mb-4 text-12 opacity-50">
-            📝
-          </div>
-          <p class="text-5 text-$vp-c-text-2">
-            暂无说说内容
-          </p>
+      <div v-if="currentTalks.length === 0" class="py-16 text-center">
+        <div class="mb-4 text-12 opacity-50">
+          📝
         </div>
-      </NCard>
+        <p class="text-5 text-$vp-c-text-2">
+          暂无说说内容
+        </p>
+      </div>
     </section>
 
     <!-- 分页 -->
@@ -107,13 +101,9 @@ function goToPage(page: number) {
 </template>
 
 <style scoped>
-.talks-container {
-  padding: 24px;
-}
-
 @media (max-width: 768px) {
-  .talks-container {
-    padding: 16px;
+  .max-w-3xl {
+    max-width: 100%;
   }
 }
 </style>

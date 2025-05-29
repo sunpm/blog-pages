@@ -4,6 +4,7 @@ import { withBase } from 'vitepress'
 import { computed, ref } from 'vue'
 import { META } from '../../../config/app.config'
 import { useTags } from '../../composables'
+import CustomCard from '../common/CustomCard.vue'
 
 defineOptions({
   name: 'TagsList',
@@ -116,52 +117,52 @@ function getTagColor(index: number) {
         「{{ tag }}」标签下的文章
       </h3>
 
-      <NGrid :x-gap="16" :y-gap="16" :cols="1" :md-cols="2" :xl-cols="2">
-        <NGridItem v-for="(item, index) in posts" :key="index">
-          <div class="group relative">
-            <!-- 卡片光影效果 -->
-            <div class="absolute inset-0 scale-95 rounded-3 from-blue-500/10 to-purple-500/10 bg-gradient-to-br opacity-0 blur-xl transition-all duration-500 group-hover:scale-100 group-hover:opacity-100" />
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+        <div v-for="(item, index) in posts" :key="index" class="group relative">
+          <!-- 卡片光影效果 -->
+          <div class="absolute inset-0 scale-95 rounded-3 from-blue-500/10 to-purple-500/10 bg-gradient-to-br opacity-0 blur-xl transition-all duration-500 group-hover:scale-100 group-hover:opacity-100" />
 
-            <NCard
+          <a
+            :href="withBase(item.regularPath)"
+            :title="item.frontMatter.title"
+            class="relative block"
+          >
+            <CustomCard
               hoverable
-              :href="withBase(item.regularPath)"
-              tag="a"
-              :title="item.frontMatter.title"
-              class="relative border-0 rounded-3 bg-$vp-c-bg-soft/50 backdrop-blur-sm transition-all duration-300 hover:(bg-$vp-c-bg-soft shadow-2xl -translate-y-1)"
+              class="border-0 rounded-3 bg-$vp-c-bg-soft/50 backdrop-blur-sm transition-all duration-300 hover:(bg-$vp-c-bg-soft shadow-2xl -translate-y-1)"
             >
-              <template #header>
-                <div class="flex items-start gap-3">
-                  <div class="mt-1 text-4">
-                    📄
-                  </div>
-                  <div class="min-w-0 flex-1">
-                    <h4 class="text-4.5 text-$vp-c-text-1 font-semibold leading-snug transition-colors duration-300 group-hover:text-$vp-c-brand-1">
-                      {{ item.frontMatter.title }}
-                    </h4>
-                  </div>
+              <!-- Header -->
+              <div class="mb-4 flex items-start gap-3">
+                <div class="mt-1 text-4">
+                  📄
                 </div>
-              </template>
+                <div class="min-w-0 flex-1">
+                  <h4 class="text-4.5 text-$vp-c-text-1 font-semibold leading-snug transition-colors duration-300 group-hover:text-$vp-c-brand-1">
+                    {{ item.frontMatter.title }}
+                  </h4>
+                </div>
+              </div>
 
-              <div class="line-clamp-3 text-4 text-$vp-c-text-2 leading-relaxed">
+              <!-- Content -->
+              <div class="line-clamp-3 mb-4 text-4 text-$vp-c-text-2 leading-relaxed">
                 {{ item.frontMatter.description || '暂无描述...' }}
               </div>
 
-              <template #footer>
-                <div class="flex items-center justify-between text-3.5 text-$vp-c-text-3">
-                  <div class="flex items-center gap-2">
-                    <span>🕒</span>
-                    <span>{{ item.frontMatter.date || '未知日期' }}</span>
-                  </div>
-                  <div class="flex items-center gap-1 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                    <span>阅读</span>
-                    <span>→</span>
-                  </div>
+              <!-- Footer -->
+              <div class="flex items-center justify-between text-3.5 text-$vp-c-text-3">
+                <div class="flex items-center gap-2">
+                  <span>🕒</span>
+                  <span>{{ item.frontMatter.date || '未知日期' }}</span>
                 </div>
-              </template>
-            </NCard>
-          </div>
-        </NGridItem>
-      </NGrid>
+                <div class="flex items-center gap-1 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <span>阅读</span>
+                  <span>→</span>
+                </div>
+              </div>
+            </CustomCard>
+          </a>
+        </div>
+      </div>
     </div>
 
     <!-- 空状态 -->
