@@ -1,8 +1,6 @@
 ---
-head:
-  - - meta
-    - name: description
-      content: 在 Sunpm 的标签页面，用于展示符合此标签的文章列表。
+title: 标签
+description: 按标签分类的文章列表
 
 editLink: false
 lastUpdated: false

@@ -43,7 +43,7 @@ function formatTime(time: string | Date) {
 </script>
 
 <template>
-  <div class="talk-item">
+  <div class="talk-item border-l-2 border-$vp-c-brand-1 py-3 pl-4 transition-all duration-300 hover:border-l-4">
     <div class="talk-content">
       <div class="talk-text" v-html="content" />
       <div class="talk-meta">
@@ -55,34 +55,11 @@ function formatTime(time: string | Date) {
 
 <style scoped>
 .talk-item {
-  background: var(--vp-c-bg-soft);
-  border: 1px solid var(--vp-c-border);
-  border-radius: 12px;
-  padding: 20px;
   margin-bottom: 16px;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.talk-item::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 4px;
-  height: 100%;
-  background: linear-gradient(135deg, var(--vp-c-brand-1), var(--vp-c-brand-2));
-}
-
-.talk-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  border-color: var(--vp-c-brand-1);
 }
 
 .talk-content {
-  margin-left: 8px;
+  padding: 4px 0;
 }
 
 .talk-text {
@@ -111,7 +88,7 @@ function formatTime(time: string | Date) {
 
 .talk-time {
   font-size: 14px;
-  color: var(--vp-c-text-2);
+  color: var(--vp-c-text-3);
   display: flex;
   align-items: center;
   gap: 4px;
@@ -123,11 +100,6 @@ function formatTime(time: string | Date) {
 }
 
 @media (max-width: 768px) {
-  .talk-item {
-    padding: 16px;
-    margin-bottom: 12px;
-  }
-
   .talk-text {
     font-size: 15px;
   }

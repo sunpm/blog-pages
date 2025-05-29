@@ -1,6 +1,6 @@
 ---
 description: 
-globs: 
+globs: *.vue,*.ts,*.mts
 alwaysApply: false
 ---
 
